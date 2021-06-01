@@ -1,1 +1,39 @@
-// Specific CSS for your home-page
+body {
+  background-color: #F1ECE4;
+  font-family: 'Inter', sans-serif;
+  color: #262627;
+}
+.card-img-top {
+  margin: 0 auto;
+  border-radius: 2px;
+  height: 200px;
+  object-fit: cover;
+}
+.card-title{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.card{
+  display: flex;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
+  margin: 10px 10px 10px 10px;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  transition: box-shadow 500ms ease,transform 500ms ease;
+  box-shadow: -10px 10px 0 #474747;
+  }
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f7f3ed;
+  color: #474747;
+  text-align: center;
+}
+
+
