@@ -203,8 +203,8 @@ puts "Created articles 🐙🎾🧠"
     id: 1
     title: "Freediving"
     description: "Underwater folder, blub, blub"
-    image:
-    color:
+    image: "freediving_folder"
+    color: "black"
     user_id: 1
     )
 
@@ -212,8 +212,8 @@ puts "Created articles 🐙🎾🧠"
     id: 2
     title: "Tennis"
     description: "Folder for my tennis related research"
-    image:
-    color:
+    image: "tennis_folder"
+    color: "yellow"
     user_id: 1
     )
 
@@ -221,8 +221,8 @@ puts "Created articles 🐙🎾🧠"
     id: 3
     title: "Neuroscience"
     description: "For university and PHD research"
-    image:
-    color:
+    image: "neuroscience_folder"
+    color: "red"
     user_id: 1
     )
 
