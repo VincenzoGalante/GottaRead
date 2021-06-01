@@ -9,5 +9,4 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   has_many :folders, dependent: :destroy
-
 end
