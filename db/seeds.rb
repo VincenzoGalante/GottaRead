@@ -218,83 +218,102 @@ puts "Created articles 🐙🎾🧠"
   #all articles, from n until n+4
 
   first_folder = Folder.first
+  second_folder = Folder.first + 1
+  third_folder = Folder.first + 2
 
-  first_folder.articles << Article.first
+  first_folder.articles << Article.first,
+  first_folder.articles << Article.first + 1,
+  first_folder.articles << Article.first + 2,
+  first_folder.articles << Article.first + 3,
+  first_folder.articles << Article.first + 4,
 
-  # Connection.new(
+  second_folder.articles << Article.first + 5,
+  second_folder.articles << Article.first + 6,
+  second_folder.articles << Article.first + 7,
+  second_folder.articles << Article.first + 8,
+  second_folder.articles << Article.first + 9,
+
+  third_folder.articles << Article.first + 10,
+  third_folder.articles << Article.first + 11,
+  third_folder.articles << Article.first + 12,
+  third_folder.articles << Article.first + 13,
+  third_folder.articles << Article.first + 14,
+
+#Old Connections
+  #Connection.new(
   #   folder_id: Folder.first.id,
   #   article_id: Article.first.id,
   #   )
 
-  Connection.create!(
-    folder_id: Folder.first.id,
-    article_id: Article.first.id + 1,
-    )
+  # Connection.create!(
+  #   folder_id: Folder.first.id,
+  #   article_id: Article.first.id + 1,
+  #   )
 
-  Connection.create!(
-    folder_id: Folder.first.id,
-    article_id: "#{Article.first.id + 2}",
-    )
+  # Connection.create!(
+  #   folder_id: Folder.first.id,
+  #   article_id: "#{Article.first.id + 2}",
+  #   )
 
-  Connection.create!(
-    folder_id: Folder.first.id,
-    article_id: "#{Article.first.id + 3}",
-    )
+  # Connection.create!(
+  #   folder_id: Folder.first.id,
+  #   article_id: "#{Article.first.id + 3}",
+  #   )
 
-  Connection.create!(
-    folder_id: Folder.first.id,
-    article_id: "#{Article.first.id + 4}",
-    )
+  # Connection.create!(
+  #   folder_id: Folder.first.id,
+  #   article_id: "#{Article.first.id + 4}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 1}",
-    article_id: "#{Article.first.id + 5}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 1}",
+  #   article_id: "#{Article.first.id + 5}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 1}",
-    article_id: "#{Article.first.id + 6}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 1}",
+  #   article_id: "#{Article.first.id + 6}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 1}",
-    article_id: "#{Article.first.id + 7}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 1}",
+  #   article_id: "#{Article.first.id + 7}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 1}",
-    article_id: "#{Article.first.id + 8}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 1}",
+  #   article_id: "#{Article.first.id + 8}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 1}",
-    article_id: "#{Article.first.id + 9}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 1}",
+  #   article_id: "#{Article.first.id + 9}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 2}",
-    article_id: "#{Article.first.id + 10}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 2}",
+  #   article_id: "#{Article.first.id + 10}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 2}",
-    article_id: "#{Article.first.id + 11}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 2}",
+  #   article_id: "#{Article.first.id + 11}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 2}",
-    article_id: "#{Article.first.id + 12}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 2}",
+  #   article_id: "#{Article.first.id + 12}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 2}",
-    article_id: "#{Article.first.id + 13}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 2}",
+  #   article_id: "#{Article.first.id + 13}",
+  #   )
 
-  Connection.create!(
-    folder_id: "#{Folder.first.id + 2}",
-    article_id: "#{Article.first.id + 14}",
-    )
+  # Connection.create!(
+  #   folder_id: "#{Folder.first.id + 2}",
+  #   article_id: "#{Article.first.id + 14}",
+  #   )
 
 puts "Created connections 🤜🏻🤛🏿"
 
