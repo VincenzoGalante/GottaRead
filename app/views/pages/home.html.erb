@@ -1,11 +1,6 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-
-
-
-
-
 <div class="card-deck">
   <%= render partial: "dashboard_card", locals: {title: "Neuroscience", text: "Neuroscience, also known as Neural Science, is the study of how the nervous system develops, its structure, and what it does. Neuroscientists focus on the brain and its impact on behavior and cognitive functions."} %>
     <%= render partial: "dashboard_card", locals: {title: "Tennis", text: "Tennis is a recreational and competitive game played in singles and doubles formats. Singles is the most commonly recognised way of playing tennis, with two players competing against each other. It can be played as an informal game or as a competitive, scored match."} %>
@@ -13,4 +8,4 @@
 </div>
 <br>
 
-
+<%= link_to "Create an article", new_article_path %>

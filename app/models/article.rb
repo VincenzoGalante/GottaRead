@@ -4,5 +4,5 @@ class Article < ApplicationRecord
   validates :url, presence: true
   validates :title, presence: true
   validates :status, presence: true
-  validates :importance, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5, only_integer: true }
+  validates :importance, numericality: { in: 0..5, only_integer: true }
 end
