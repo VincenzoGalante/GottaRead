@@ -1,38 +1,39 @@
-// .gradient {
-//   height: 250px;
-//   background-color: #F1ECE4;
-//   background-image: linear-gradient(to top right, #90B498, #95ced7);
-// }
 .banner {
+  color: $gray;
   height: 800px;
   display: flex;
   background-color: #F1ECE4;
-  background-image: linear-gradient(to top right, #90B498, #95ced7);
   justify-content: space-around;
-  background-image: asset-url('large_thumbnail.png');
-  background-size: 250px;
-  background-position: center;
-
+  background-size: cover;
+.header {
+  width: 77%;
+  padding: 100px 0 40px 100px;
+}
+.secondheader {
+  width: 60%;
+  padding: 10px 40px 10px 100px;
+}
   h1 {
-    width: 70%;
-    padding: 100px 100px 100px 50px;
-    font-family: 'Inter', sans-serif;
-    color: #F1ECE4;
-    font-weight: 300;
-    font-size: 70px;
+    font-size: 77px;
+    font-weight: 400;
   }
-  p {
-    width: 45%;
-    padding: 10px 40px 10px 50px;
-    font-family: 'Inter', sans-serif;
-    color: #F1ECE4;
-    opacity: .8;
-    font-size: 25px;
-    font-weight: lighter;
-    margin-bottom: 30px;
+  .eachletter:hover{
+    text-transform: 1;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .banner-pic {
+    flex-grow: 1;
+    margin: 130px 50px;
+    width: 40%;
+    height: auto;
   }
   .btn {
-    margin: 0 0 0 50px;
     padding: 15px 50px;
   }
 }
