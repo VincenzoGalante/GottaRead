@@ -9,3 +9,7 @@
 <br>
 
 <%= link_to "Create an article", new_article_path %>
+
+<% @articles.each do |article| %>
+<%= puts article.title %>
+<% end %>
