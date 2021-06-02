@@ -1,0 +1,38 @@
+.button-black {
+
+    display: inline-block;
+    padding: 8px 16px;
+    line-height: 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: inherit;
+    background: #343a40;;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #343a40;;
+    border-image: initial;
+    text-decoration: none !important;
+}
+
+.button-ghost {
+
+    background-color: transparent;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    color: black;
+    text-align: center;
+    font-family: inherit;
+    padding: 8px 16px;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #343a40;;
+    border-image: initial;
+    text-decoration: none !important;
+}
