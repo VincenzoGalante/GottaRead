@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= content_for(:navbar_class, "navbar-home") %>
+
+<div class="banner">
+  <div class="banner-content">
+    <div class="header">
+      <h1>There is a better way
+        to save articles </h1>
+    </div>
+      <br>
+    <div class="Secondheader">
+      <p>You don't want to get angry at your reading list. And you current reading list is a mess. Use GottaRead instead — and make your brain happy.</p>
+      <%= link_to "Get started - it's free", new_user_session_path, class: "btn btn-dark"  %>
+    </div>
+    <div class="pic">
+      <img src="large_thumbnail.png">
+    </div>
+  </div>
+</div>
