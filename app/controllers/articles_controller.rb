@@ -12,10 +12,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def article_to_folder
-
-  end
-
   private
 
   def article_params

@@ -26,7 +26,8 @@ puts "Created user 👤"
 
 
 #Creating Folders
-  Folder.create!(
+
+ Folder.create!(
     title: "Freediving",
     description: "Underwater folder, blub, blub",
     image: "freediving_folder",
@@ -47,6 +48,14 @@ puts "Created user 👤"
     description: "For university and PHD research",
     image: "neuroscience_folder",
     color: "red",
+    user_id: User.first.id
+    )
+
+    Folder.create!(
+    title: "Inbox",
+    description: "Unsorted articles",
+    image: "",
+    color: "white",
     user_id: User.first.id
     )
 
@@ -96,7 +105,7 @@ puts "Created folder 🗂"
     )
 
     #5
-    Article.create(
+    Article.create!(
       url: "https://theconversation.com/free-divers-have-long-defied-science-and-we-still-dont-really-understand-how-they-go-so-deep-92690",
       title: "Free divers have long defied science – and we still don’t really understand how they go so deep",
       note: "Science related freediving article, weekend read",
@@ -107,7 +116,7 @@ puts "Created folder 🗂"
 
   #TENNIS
     #6
-    Article.create(
+    Article.create!(
       url: "https://www.nytimes.com/2021/05/31/sports/tennis/2021-french-open-what-to-watch-tuesday.html",
       title: "2021 French Open: What to Watch on Tuesday",
       note: "French Open, Sunday read",
@@ -117,7 +126,7 @@ puts "Created folder 🗂"
     )
 
     #7
-    Article.create(
+    Article.create!(
       url: "https://www.jhse.ua.es/article/view/2020-v15-n1-ball-change-tennis-match-characteristics-rally-pace-grand-slam-tournaments",
       title: "Ball change in tennis: How does it affect match characteristics and rally pace in Grand Slam tournaments?",
       note: "Paper on tennis balls",
@@ -127,7 +136,7 @@ puts "Created folder 🗂"
     )
 
     #8
-    Article.create(
+    Article.create!(
       url: "https://www.tennismindgame.com/serena-williams-tennis-lessons.html",
       title: "Serena Williams Masterclass Video Course Review",
       note: "Masterclass review",
@@ -137,7 +146,7 @@ puts "Created folder 🗂"
     )
 
     #9
-    Article.create(
+    Article.create!(
       url: "https://www.bloomberg.com/news/features/2021-03-24/novak-djokovic-other-tennis-players-seek-to-reform-economics-of-the-sport",
       title: "The Missed Business Opportunity That Is Pro Tennis",
       note: "Weekend read on tennis as a business",
@@ -147,7 +156,7 @@ puts "Created folder 🗂"
     )
 
     #10
-    Article.create(
+    Article.create!(
       url: "https://bleacherreport.com/articles/1857664-why-is-american-tennis-dying",
       title: "Why Is American Tennis Dying?",
       note: "Article on declining importance of tennis in US",
@@ -158,7 +167,7 @@ puts "Created folder 🗂"
 
   #NEUROSCIENE
     #11
-    Article.create(
+    Article.create!(
       url: "https://www.nature.com/articles/d41586-021-01353-9",
       title: "Activation of retinal neurons triggers tumour formation in cancer-prone mice",
       note: "Weekend read about tumour formation",
@@ -168,7 +177,7 @@ puts "Created folder 🗂"
     )
 
     #12
-    Article.create(
+    Article.create!(
       url: "https://www.nature.com/articles/s41591-021-01385-8",
       title: "Putting the MD back into MDMA",
       note: "Article on MDMA for PTSD",
@@ -178,7 +187,7 @@ puts "Created folder 🗂"
     )
 
     #13
-    Article.create(
+    Article.create!(
       url: "https://www.jneurosci.org/spotlight",
       title: "Annual Report on JNeurosci Spotlight",
       note: "Long weekend read about NS news",
@@ -188,7 +197,7 @@ puts "Created folder 🗂"
     )
 
     #14
-    Article.create(
+    Article.create!(
       url: "https://neurosciencenews.com/omega-3-psychosis-18527/",
       title: "Low Levels of Omega-3 Associated With Higher Risk of Psychosis",
       note: "Omega 3 and psychosis correlation",
@@ -198,7 +207,7 @@ puts "Created folder 🗂"
     )
 
     #15
-    Article.create(
+    Article.create!(
       url: "https://www.the-scientist.com/reading-frames/opinion-the-overlooked-power-of-inhibitory-neurons-68819",
       title: "Opinion: The Overlooked Power of Inhibitory Neurons",
       note: "Short article, quick read",
@@ -207,7 +216,27 @@ puts "Created folder 🗂"
       reminder: DateTime.strptime("2021-05-05 18:30:00", "%Y-%m-%d %H:%M:%S")
     )
 
-puts "Created articles 🐙🎾🧠"
+  #HOMELESSARTICLES
+    #16
+    Article.create!(
+      url: "wwww.google.com",
+      title: "This is a title",
+      note: "Test 123",
+      status: 0,
+      importance: rand(0..5),
+    )
+
+    #17
+    Article.create!(
+      url: "www.pudim.com.br",
+      title: "This is another title",
+      note: "Mic check 1, 2, 1, 2",
+      status: 0,
+      importance: rand(0..5),
+    )
+
+
+puts "Created articles 🐙🎾🧠 & ❌🏠"
 
 
 #Creating Connections
@@ -217,103 +246,103 @@ puts "Created articles 🐙🎾🧠"
   #for each folder n = index + 1
   #all articles, from n until n+4
 
-  first_folder = Folder.first
-  second_folder = Folder.first + 1
-  third_folder = Folder.first + 2
+  # first_folder = Folder.first
+  # second_folder = Folder.second
+  # third_folder = Folder.third
 
-  first_folder.articles << Article.first,
-  first_folder.articles << Article.first + 1,
-  first_folder.articles << Article.first + 2,
-  first_folder.articles << Article.first + 3,
-  first_folder.articles << Article.first + 4,
+  # first_folder.articles << Article.first
+  # first_folder.articles << Article.first + 1
+  # first_folder.articles << Article.first + 2
+  # first_folder.articles << Article.first + 3
+  # first_folder.articles << Article.first + 4
 
-  second_folder.articles << Article.first + 5,
-  second_folder.articles << Article.first + 6,
-  second_folder.articles << Article.first + 7,
-  second_folder.articles << Article.first + 8,
-  second_folder.articles << Article.first + 9,
+  # second_folder.articles << Article.first + 5
+  # second_folder.articles << Article.first + 6
+  # second_folder.articles << Article.first + 7
+  # second_folder.articles << Article.first + 8
+  # second_folder.articles << Article.first + 9
 
-  third_folder.articles << Article.first + 10,
-  third_folder.articles << Article.first + 11,
-  third_folder.articles << Article.first + 12,
-  third_folder.articles << Article.first + 13,
-  third_folder.articles << Article.first + 14,
+  # third_folder.articles << Article.first + 10
+  # third_folder.articles << Article.first + 11
+  # third_folder.articles << Article.first + 12
+  # third_folder.articles << Article.first + 13
+  # third_folder.articles << Article.first + 14
 
 #Old Connections
-  #Connection.new(
-  #   folder_id: Folder.first.id,
-  #   article_id: Article.first.id,
-  #   )
+  Connection.new(
+    folder_id: Folder.first.id,
+    article_id: Article.first.id,
+    )
 
-  # Connection.create!(
-  #   folder_id: Folder.first.id,
-  #   article_id: Article.first.id + 1,
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id,
+    article_id: Article.first.id + 1,
+    )
 
-  # Connection.create!(
-  #   folder_id: Folder.first.id,
-  #   article_id: "#{Article.first.id + 2}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id,
+    article_id: Article.first.id + 2,
+    )
 
-  # Connection.create!(
-  #   folder_id: Folder.first.id,
-  #   article_id: "#{Article.first.id + 3}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id,
+    article_id: Article.first.id + 3,
+    )
 
-  # Connection.create!(
-  #   folder_id: Folder.first.id,
-  #   article_id: "#{Article.first.id + 4}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id,
+    article_id: Article.first.id + 4,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 1}",
-  #   article_id: "#{Article.first.id + 5}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 5,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 1}",
-  #   article_id: "#{Article.first.id + 6}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 6,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 1}",
-  #   article_id: "#{Article.first.id + 7}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 7,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 1}",
-  #   article_id: "#{Article.first.id + 8}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 8,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 1}",
-  #   article_id: "#{Article.first.id + 9}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 9,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 2}",
-  #   article_id: "#{Article.first.id + 10}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 10,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 2}",
-  #   article_id: "#{Article.first.id + 11}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 11,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 2}",
-  #   article_id: "#{Article.first.id + 12}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 12,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 2}",
-  #   article_id: "#{Article.first.id + 13}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 13,
+    )
 
-  # Connection.create!(
-  #   folder_id: "#{Folder.first.id + 2}",
-  #   article_id: "#{Article.first.id + 14}",
-  #   )
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 14,
+    )
 
 puts "Created connections 🤜🏻🤛🏿"
 
