@@ -232,27 +232,27 @@ puts "Created articles 🐙🎾🧠"
   #for each folder n = index + 1
   #all articles, from n until n+4
 
-  first_folder = Folder.first
-  second_folder = Folder.first + 1
-  third_folder = Folder.first + 2
+  # first_folder = Folder.first
+  # second_folder = Folder.first + 1
+  # third_folder = Folder.first + 2
 
-  first_folder.articles << Article.first,
-  first_folder.articles << Article.first + 1,
-  first_folder.articles << Article.first + 2,
-  first_folder.articles << Article.first + 3,
-  first_folder.articles << Article.first + 4,
+  # first_folder.articles << Article.first,
+  # first_folder.articles << Article.first + 1,
+  # first_folder.articles << Article.first + 2,
+  # first_folder.articles << Article.first + 3,
+  # first_folder.articles << Article.first + 4,
 
-  second_folder.articles << Article.first + 5,
-  second_folder.articles << Article.first + 6,
-  second_folder.articles << Article.first + 7,
-  second_folder.articles << Article.first + 8,
-  second_folder.articles << Article.first + 9,
+  # second_folder.articles << Article.first + 5,
+  # second_folder.articles << Article.first + 6,
+  # second_folder.articles << Article.first + 7,
+  # second_folder.articles << Article.first + 8,
+  # second_folder.articles << Article.first + 9,
 
-  third_folder.articles << Article.first + 10,
-  third_folder.articles << Article.first + 11,
-  third_folder.articles << Article.first + 12,
-  third_folder.articles << Article.first + 13,
-  third_folder.articles << Article.first + 14,
+  # third_folder.articles << Article.first + 10,
+  # third_folder.articles << Article.first + 11,
+  # third_folder.articles << Article.first + 12,
+  # third_folder.articles << Article.first + 13,
+  # third_folder.articles << Article.first + 14,
 
 #Old Connections
   #Connection.new(
