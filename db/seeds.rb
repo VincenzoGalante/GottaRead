@@ -62,7 +62,8 @@ puts "Created folder 🗂"
       note: "Story of a self-thought Pythong developer",
       status: 1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-02-10 10:00:00","%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-02-10 10:00:00","%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
       )
 
     #2
@@ -72,7 +73,8 @@ puts "Created folder 🗂"
       note: "Freediving, Frenzel, Diving techniques",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-11 13:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-11 13:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #3
@@ -82,7 +84,8 @@ puts "Created folder 🗂"
       note: "Turlte Sanctuary, to read for next vacation",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-10 12:00:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-10 12:00:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #4
@@ -92,7 +95,8 @@ puts "Created folder 🗂"
       note: "",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-10 12:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-10 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #5
@@ -102,7 +106,8 @@ puts "Created folder 🗂"
       note: "Science related freediving article, weekend read",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-13 12:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-13 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
   #TENNIS
@@ -113,7 +118,8 @@ puts "Created folder 🗂"
       note: "French Open, Sunday read",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-19 12:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-19 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #7
@@ -123,7 +129,8 @@ puts "Created folder 🗂"
       note: "Paper on tennis balls",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-23 10:00:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-23 10:00:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #8
@@ -133,7 +140,8 @@ puts "Created folder 🗂"
       note: "Masterclass review",
       status: 1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-01 13:15:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-01 13:15:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #9
@@ -143,7 +151,8 @@ puts "Created folder 🗂"
       note: "Weekend read on tennis as a business",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-12 13:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-12 13:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #10
@@ -153,7 +162,8 @@ puts "Created folder 🗂"
       note: "Article on declining importance of tennis in US",
       status: -1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-04-28 12:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-04-28 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
   #NEUROSCIENE
@@ -164,7 +174,8 @@ puts "Created folder 🗂"
       note: "Weekend read about tumour formation",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-07-01 13:00:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-07-01 13:00:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #12
@@ -174,7 +185,8 @@ puts "Created folder 🗂"
       note: "Article on MDMA for PTSD",
       status: -1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-04-26 13:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-04-26 13:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #13
@@ -184,7 +196,8 @@ puts "Created folder 🗂"
       note: "Long weekend read about NS news",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-26 13:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-26 13:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #14
@@ -194,7 +207,8 @@ puts "Created folder 🗂"
       note: "Omega 3 and psychosis correlation",
       status: -1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-02 12:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-02 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
     #15
@@ -204,7 +218,8 @@ puts "Created folder 🗂"
       note: "Short article, quick read",
       status: -1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-05 18:30:00", "%Y-%m-%d %H:%M:%S")
+      reminder: DateTime.strptime("2021-05-05 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
     )
 
 puts "Created articles 🐙🎾🧠"
