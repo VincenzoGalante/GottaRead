@@ -1,26 +1,44 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<div class="card-top w-50">
-  <%= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", text: "Neuroscience, also known as Neural Science, is the study of how the nervous system develops, its structure, and what it does. Neuroscientists focus on the brain and its impact on behavior and cognitive functions."} %>
+<div class="banner">
+  <div class="banner-content">
+    <div class="header">
+      <h1><span class="eachletter">T</span>here is a better way
+        to save articles </h1>
+    </div>
+    <div class="secondheader">
+      <h2> Your current reading list is a mess. You don't want to get angry at her. Use GottaRead instead — and make your brain happy.</h2>
+      <br>
+      <%= link_to "Get started - it's free", new_user_session_path, class: "btn btn-dark"  %>
+    </div>
+  </div>
+  <div class="banner-pic">
+    <%= image_tag "large_thumbnail.png", alt: "girl reading" %>
+  </div>
+</div>
+<div class="body-homepage">
+  <div class="firstbody">
+    <h1>the best place to keep all your favourite articles organized</h1>
+  </div>
+  <div class="secondbody">
+    <h2>Never miss an interesting article about your chosen topic</h2>
+    <p>be reminded at the time that suits your life</p>
+  </div>
+  <div class=thirdbody>
+    <div>
+      <h3>Organize with ease</h3>
+      <p><i class="far fa-folder"></i> GottaRead is not just a pretty interface, it will help you untangle your bookmark mess.</p>
+    </div>
+    <div>
+      <h3>Seeing the big picture</h3>
+      <p>All relevant info visible at one glance, so there's no need to search for long</p>
+    </div>
+  </div>
+  <div>
+    <div>
+    <h2>Full-text search</h2>
+    <p>The whole content of the articles you've saved is searchable. One of the strengths of GottaRead.club is that it searches not only the name, but also the contents of the pages.</p>
+    </div>
+  </div>
 </div>
 
-<div class="bottom-part-dash d-flex">
 
-  <div class="card-deck w-75">
-    <%= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", text: "Neuroscience, also known as Neural Science, is the study of how the nervous system develops, its structure, and what it does. Neuroscientists focus on the brain and its impact on behavior and cognitive functions."} %>
-      <%= render partial: "shared/dashboard_card", locals: {title: "Tennis", text: "Tennis is a recreational and competitive game played in singles and doubles formats. Singles is the most commonly recognised way of playing tennis, with two players competing against each other. It can be played as an informal game or as a competitive, scored match."} %>
-    <%= render partial: "shared/dashboard_card", locals: {title: "Diving", text: "Diving, sport of plunging into water, usually head foremost, performed with the addition of gymnastic and acrobatic stunts. ... In its more elaborate, acrobatic form, diving originated in Europe early in the 19th century as a diversion of gymnasts and as a competitive sport in the late 19th century."} %>
-  </div>
-
-  <div class="dashboard-button">
-    <%= render partial: "shared/dashboard_button", locals: {title: "Search for article", buttontype: "button-black" } %>
-    <%= render partial: "shared/dashboard_button", locals: {title: "Add article", buttontype: "button-black"} %>
-    <%= render partial: "shared/dashboard_button", locals: {title: "Add connection", buttontype: "button-ghost"} %>
-    <%= render partial: "shared/dashboard_button", locals: {title: "Add folder", buttontype: "button-ghost"} %>
-  </div>
-
-</div>
-<%= link_to "Create an article", new_article_path %>
-
-
+   <h2>Create folders and set a reminder that you enjoy looking at your reading list</h2>
