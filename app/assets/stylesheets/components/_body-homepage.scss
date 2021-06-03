@@ -20,23 +20,12 @@
   }
 }
 .firstbody{
-  padding: 200px;
-
+  padding: 150px;
 }
 
-.secondbody {
-  background-image: linear-gradient(to top right, #cce5dd, $beige,);
-  padding: 200px;
-}
 .thirdbody{
   background: $beige;
   padding: 200px;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-  h1{
-    padding:37px;
-  }
-
+  justify-content: space-between;
 }
