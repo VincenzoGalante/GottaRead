@@ -18,7 +18,7 @@
 
 .card:hover{
   transform: scale(1.05);
-  transition: box-shadow 500ms ease,transform 500ms ease;
+  transition: box-shadow 500ms ease,transform 50ms ease;
   box-shadow: -10px 10px 0 #474747;
   }
 

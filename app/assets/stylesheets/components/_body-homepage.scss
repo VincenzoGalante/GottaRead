@@ -4,12 +4,13 @@
     font-weight: 300;
     font-size: 48px
   }
-  h3 {
+
+  h2 {
     font-weight: 500;
     font-size: 30px
   }
 
-  h2 {
+  h3 {
     font-weight: 500;
     font-size: 20px
   }
@@ -19,13 +20,25 @@
    font-size: 24px;
   }
 }
-.firstbody{
-  padding: 150px;
+
+.lp_motto{
+  margin-bottom: 50px;
 }
 
-.thirdbody{
-  background: $beige;
-  padding: 200px;
+.lp_usp_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-itmes: baseline;
+}
+
+.lp_usp_text{
+  margin: 100px;
+}
+
+.footer {
+  p {
+  text-align: left;
+  margin-left: 160px;
+  font-size: 14px;
+  }
 }
