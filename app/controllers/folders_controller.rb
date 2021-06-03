@@ -9,10 +9,12 @@ class FoldersController < ApplicationController
 
   def create
     @folder = Folder.new(folders_params)
+    @folder.user = current_user
       if @folder.save
         redirect_to root_path
       else
         render :new
+      raise
       end
   end
 

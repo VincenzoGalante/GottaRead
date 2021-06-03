@@ -10,11 +10,25 @@
 </div>
 <br>
 
-<%= link_to "Create an article", new_article_path %><br>
-<%= link_to "Create a folder", new_folder_path %>
+LIST OF ARTICLES<br>
+<p>
+  <% @articles.each do |article| %>
+  <%= article.title %><br>
+  <% end %>
+</p>
 
-                  
-                  
+LIST OF FOLDERS<br>
+<p>
+  <% @folders.each do |folder| %>
+  <%= folder.title %><br>
+  <% end %>
+</p>
+
+
+<%= link_to "Create an article", new_article_path %><br>
+<%= link_to "Create a connection", new_connection_path %><br>
+<%= link_to "Create a folder", new_folder_path %><br>
+
 <div class="banner">
   <div class="banner-content">
     <div class="header">
@@ -22,7 +36,7 @@
         to save articles </h1>
     </div>
     <div class="secondheader">
-      <h2>You don't want to get angry at your reading list. And you current reading list is a mess. Use GottaRead instead — and make your brain happy.</h2>
+      <h2>Your current reading lsit is a mess. You don't want to get angry at her. Use GottaRead instead — and make your brain happy.</h2>
       <br>
       <%= link_to "Get started - it's free", new_user_session_path, class: "btn btn-dark"  %>
     </div>
@@ -37,23 +51,24 @@
     <h1>the best place to keep all your favourite articles organized</h1>
   </div>
   <div class="firstbody">
-    <h2>Never miss an interesting article about your chosen topic</h2>
-    <p>be reminded at the time that suits your life</p>
+    <h2>Never miss an interesting article about your chosen topic.</h2>
+    <p>Be reminded at the time that suits your life.</p>
   </div>
   <div class=thirdbody>
     <div>
       <h3><i class="far fa-folder"></i> Organize with ease</h3>
-      <p>GottaRead.club is not just a pretty interface, it will help you untangle your bookmark mess.</p>
+      <p>GottaRead is not just a pretty interface, it will help you untangle your bookmark mess.</p>
     </div>
     <div>
       <h3>Seeing the big picture</h3>
-      <p>All relevant info visible at one glance, so there's no need to search for long</p>
+      <p>All relevant info visible at one glance, so there's no need to search for long.</p>
     </div>
   </div>
   <div>
     <div class="firstbody">
     <h2>Full-text search</h2>
-    <p>The whole content of the articles you've saved is searchable. One of the strengths of GottaRead.club is that it searches not only the name, but also the contents of the pages.</p>
+    <p>Stop searching for URL-tags. With GottaRead you can search for a buzwword within the whole article, or notes you took, or publisher<br>
+    ... well, or the URL.</p>
     </div>
   </div>
 </div>
