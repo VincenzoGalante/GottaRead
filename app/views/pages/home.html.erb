@@ -8,6 +8,21 @@
 </div>
 <br>
 
+LIST OF ARTICLES<br>
+<p>
+  <% @articles.each do |article| %>
+  <%= article.title %><br>
+  <% end %>
+</p>
+
+LIST OF FOLDERS<br>
+<p>
+  <% @folders.each do |folder| %>
+  <%= folder.title %><br>
+  <% end %>
+</p>
+
+
 <%= link_to "Create an article", new_article_path %><br>
 <%= link_to "Create a connection", new_connection_path %><br>
 <%= link_to "Create a folder", new_folder_path %><br>
