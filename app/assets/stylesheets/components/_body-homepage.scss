@@ -1,0 +1,31 @@
+.body-homepage{
+  text-align: center;
+  h1 {
+    font-weight: 300;
+    font-size: 48px
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 30px
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 20px
+  }
+
+  p {
+   font-weight: 300;
+   font-size: 24px;
+  }
+}
+.firstbody{
+  padding: 150px;
+}
+
+.thirdbody{
+  background: $beige;
+  padding: 200px;
+  display: flex;
+  justify-content: space-between;
+}
