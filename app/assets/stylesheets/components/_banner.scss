@@ -1,0 +1,40 @@
+.banner {
+  color: $gray;
+  height: 800px;
+  display: flex;
+  background-color: #F1ECE4;
+  justify-content: space-around;
+  background-size: cover;
+.header {
+  width: 77%;
+  padding: 100px 0 40px 150px;
+}
+.secondheader {
+  width: 60%;
+  padding: 10px 40px 10px 150px;
+}
+  h1 {
+    font-size: 77px;
+    font-weight: 400;
+  }
+  .eachletter:hover{
+    text-transform: 1;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .banner-pic {
+    flex-grow: 1;
+    padding-right: 50px;
+    margin: 130px 100px;
+    width: 40%;
+    height: auto;
+  }
+  .btn {
+    padding: 15px 50px;
+  }
+}
