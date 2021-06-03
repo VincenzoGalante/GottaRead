@@ -239,6 +239,7 @@ puts "Created folder 🗂"
       note: "Test 123",
       status: 0,
       importance: rand(0..5),
+      user_id: User.first.id
     )
 
     #17
@@ -248,6 +249,7 @@ puts "Created folder 🗂"
       note: "Mic check 1, 2, 1, 2",
       status: 0,
       importance: rand(0..5),
+      user_id: User.first.id
     )
 
 
