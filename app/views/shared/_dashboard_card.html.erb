@@ -7,7 +7,7 @@
           <div class="folder-card-text">
             <ul>
               <li><%= link_to article.title, article.url, target: :_blank %><br>
-                <%= article.status %></li>
+                <%= link_to article.status, mark_as_done_path(article) %></li>
             </ul>
           </div>
         </p>

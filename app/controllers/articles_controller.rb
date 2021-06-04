@@ -13,6 +13,12 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def mark_as_done
+    @article = Article.find(params[:id])
+    @article.done!
+    redirect_to dashboard_path
+  end
+
   def show
     article = Article.find(params[:id])
   end
