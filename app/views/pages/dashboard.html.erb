@@ -1,11 +1,11 @@
-<div class="body-dashboard">
-  <div class="mx-3 mb-3">
-    <div class="card-top w-50">
-      <%#= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", articles: "Neuroscience, also known as Neural Science, is the study of how the nervous system develops, its structure, and what it does. Neuroscientists focus on the brain and its impact on behavior and cognitive functions."} %>
-    </div>
 
+<div class="mx-3 mb-3">
+  <div class="card-top w-100 d-flex mb-3">
+    <%= render partial: "shared/card_next_article.html", locals: {title: "Next article to read"} %>
+    <%= render partial: "shared/card_missed_article", locals: {title: "Missed article to read"} %>
+  </div>
+  <br>
     <div class="bottom-part-dash d-flex">
-
       <div class="card-deck">
         <%= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", articles: @freediving_articles} %>
         <%= render partial: "shared/dashboard_card", locals: {title: "Tennis", articles: @tennis_articles} %>
