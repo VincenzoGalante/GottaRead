@@ -4,5 +4,13 @@
 }
 
 .folder-card-text {
+  a {
   font-size: 15px;
+  text-decoration: none;
+  color: grey;
+  }
+
+  a:hover {
+    color: black;
+  }
 }
