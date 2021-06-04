@@ -1,14 +1,15 @@
 <div class="mx-3 mb-3">
-  <div class="card-top w-50">
-    <%= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", text: "Neuroscience, also known as Neural Science, is the study of how the nervous system develops, its structure, and what it does. Neuroscientists focus on the brain and its impact on behavior and cognitive functions."} %>
+  <div class="card-top w-100 d-flex mb-3">
+    <%= render partial: "shared/top_dashboard_card_wide", locals: {title: "Next article to read" reminder: "Tommorow", article_title: "Brainfunction", folder_title: "Neuroscience"} %>
+    <%= render partial: "shared/top_dashboard_card_wide", locals: {title: "Missed article to read" reminder: "Yesterday", article_title: "How to get the best serve", folder_title: "Tennis"} %>
   </div>
 
   <div class="bottom-part-dash d-flex">
 
     <div class="card-deck">
-      <%= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", text: "Neuroscience, also known as Neural Science, is the study of how the nervous system develops, its structure, and what it does. Neuroscientists focus on the brain and its impact on behavior and cognitive functions."} %>
-        <%= render partial: "shared/dashboard_card", locals: {title: "Tennis", text: "Tennis is a recreational and competitive game played in singles and doubles formats. Singles is the most commonly recognised way of playing tennis, with two players competing against each other. It can be played as an informal game or as a competitive, scored match."} %>
-      <%= render partial: "shared/dashboard_card", locals: {title: "Diving", text: "Diving, sport of plunging into water, usually head foremost, performed with the addition of gymnastic and acrobatic stunts. ... In its more elaborate, acrobatic form, diving originated in Europe early in the 19th century as a diversion of gymnasts and as a competitive sport in the late 19th century."} %>
+      <%= render partial: "shared/bottom-dashboard_card_small", locals: {title: "Neuroscience", text: "Neuroscience, also known as Neural Science, is the study of how the nervous system develops, its structure, and what it does. Neuroscientists focus on the brain and its impact on behavior and cognitive functions."} %>
+        <%= render partial: "shared/bottom-dashboard_card_small", locals: {title: "Tennis", text: "Tennis is a recreational and competitive game played in singles and doubles formats. Singles is the most commonly recognised way of playing tennis, with two players competing against each other. It can be played as an informal game or as a competitive, scored match."} %>
+      <%= render partial: "shared/bottom-dashboard_card_small", locals: {title: "Diving", text: "Diving, sport of plunging into water, usually head foremost, performed with the addition of gymnastic and acrobatic stunts. ... In its more elaborate, acrobatic form, diving originated in Europe early in the 19th century as a diversion of gymnasts and as a competitive sport in the late 19th century."} %>
     </div>
     <div class="text-center">
       <div class="dashboard-button">
