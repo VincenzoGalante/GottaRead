@@ -1,5 +1,5 @@
 <div class="card">
-  <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+  <%= image_tag folder_picture, class:"card-img-top card_border", alt: "Folder picture" %>
   <div class="card-body">
     <h5 class="card-title"><%= title %></h5>
       <% articles.each do |article| %>
