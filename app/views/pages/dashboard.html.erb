@@ -7,9 +7,9 @@
   <br>
     <div class="bottom-part-dash d-flex">
       <div class="card-deck">
-        <%= render partial: "shared/dashboard_card", locals: {title: "Freediving", articles: @freediving_articles} %>
-        <%= render partial: "shared/dashboard_card", locals: {title: "Tennis", articles: @tennis_articles} %>
-        <%= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", articles: @neuroscience_articles} %>
+        <%= render partial: "shared/dashboard_card", locals: {title: "Freediving", articles: @freediving_articles, folder_picture: "freediving_folder.jpeg" } %>
+        <%= render partial: "shared/dashboard_card", locals: {title: "Tennis", articles: @tennis_articles, folder_picture: "tennis_folder.jpeg" } %>
+        <%= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", articles: @neuroscience_articles, folder_picture: "neuroscience_folder.jpeg"} %>
       </div>
       <div class="text-center">
         <div class="dashboard-button">
