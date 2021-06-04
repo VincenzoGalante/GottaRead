@@ -66,8 +66,8 @@ puts "Created folder 🗂"
   #DIVING
     #1
     Article.create!(
-      url: "https://www.reddit.com/r/learnprogramming/comments/nkbkf2/from_zero_coding_experience_at_the_age_of_24/",
-      title: "Reddit, LearnProgramming, From Zero to Hero",
+      url: "https://blogbuzzter.de/2020/02/alexey-molchanov-weltrekord-im-freediving/",
+      title: "Molchanov Worldrecord",
       note: "Story of a self-thought Pythong developer",
       status: 1,
       importance: rand(0..5),
@@ -78,7 +78,7 @@ puts "Created folder 🗂"
     #2
     Article.create!(
       url: "https://gofreediving.co.uk/definitive-guide-frenzel-technique",
-      title: "The Definitive Guide to the Frenzel Technique – With Emma Farrell",
+      title: "Frenzel Technique",
       note: "Freediving, Frenzel, Diving techniques",
       status: 0,
       importance: rand(0..5),
@@ -89,7 +89,7 @@ puts "Created folder 🗂"
     #3
     Article.create!(
       url: "https://gofreediving.co.uk/day-13-volunteering-at-turtle-rescue-sanctuary-the-olive-ridley-project",
-      title: "Day 13: Volunteering at Turtle Rescue Sanctuary – The Olive Ridley Project",
+      title: "Volunteering at Turtle Rescue Sanctuary",
       note: "Turlte Sanctuary, to read for next vacation",
       status: 0,
       importance: rand(0..5),
@@ -111,7 +111,7 @@ puts "Created folder 🗂"
     #5
     Article.create!(
       url: "https://theconversation.com/free-divers-have-long-defied-science-and-we-still-dont-really-understand-how-they-go-so-deep-92690",
-      title: "Free divers have long defied science – and we still don’t really understand how they go so deep",
+      title: "Free divers have long defied science",
       note: "Science related freediving article, weekend read",
       status: 0,
       importance: rand(0..5),
@@ -123,7 +123,7 @@ puts "Created folder 🗂"
     #6
     Article.create!(
       url: "https://www.nytimes.com/2021/05/31/sports/tennis/2021-french-open-what-to-watch-tuesday.html",
-      title: "2021 French Open: What to Watch on Tuesday",
+      title: "2021 French Open",
       note: "French Open, Sunday read",
       status: 0,
       importance: rand(0..5),
@@ -134,7 +134,7 @@ puts "Created folder 🗂"
     #7
     Article.create!(
       url: "https://www.jhse.ua.es/article/view/2020-v15-n1-ball-change-tennis-match-characteristics-rally-pace-grand-slam-tournaments",
-      title: "Ball change in tennis: How does it affect match characteristics and rally pace in Grand Slam tournaments?",
+      title: "Scientific effects on ball change in grand slam tournaments",
       note: "Paper on tennis balls",
       status: 0,
       importance: rand(0..5),
@@ -156,7 +156,7 @@ puts "Created folder 🗂"
     #9
     Article.create!(
       url: "https://www.bloomberg.com/news/features/2021-03-24/novak-djokovic-other-tennis-players-seek-to-reform-economics-of-the-sport",
-      title: "The Missed Business Opportunity That Is Pro Tennis",
+      title: "Missed Business Opportunity That Is Pro Tennis",
       note: "Weekend read on tennis as a business",
       status: 0,
       importance: rand(0..5),
@@ -179,7 +179,7 @@ puts "Created folder 🗂"
     #11
     Article.create!(
       url: "https://www.nature.com/articles/d41586-021-01353-9",
-      title: "Activation of retinal neurons triggers tumour formation in cancer-prone mice",
+      title: "Activation of retinal neurons triggers tumour",
       note: "Weekend read about tumour formation",
       status: 0,
       importance: rand(0..5),
