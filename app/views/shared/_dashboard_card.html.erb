@@ -2,8 +2,18 @@
   <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"><%= title %></h5>
-    <p class="card-text"><%= text %></p>
+      <% articles.each do |article| %>
+        <p class="card-text">
+          <div class="folder-card-text">
+            <ul>
+              <li><%= link_to article.title, article.url, target: :_blank %><br>
+                <%= article.status %></li>
+            </ul>
+          </div>
+        </p>
+      <%end%>
   </div>
+
   <div class="card-footer">
       <div><i class="fas fa-share"></i> Share</div>
       <div><i class="fas fa-plus-circle"></i> Add article</div>
