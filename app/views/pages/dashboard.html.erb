@@ -1,7 +1,7 @@
 <div class="mx-3 mb-3">
   <div class="card-top w-100 d-flex mb-3">
-    <%= render partial: "shared/top_dashboard_card_wide", locals: {title: "Next article to read", reminder: "Tommorow", article_title: "Brainfunction", folder_title: "Neuroscience"} %>
-    <%= render partial: "shared/top_dashboard_card_wide", locals: {title: "Missed article to read", reminder: "Yesterday", article_title: "How to get the best serve", folder_title: "Tennis"} %>
+    <%= render partial: "shared/card_next_article.html", locals: {title: "Next article to read"} %>
+    <%= render partial: "shared/card_missed_article", locals: {title: "Missed article to read"} %>
   </div>
 
   <div class="bottom-part-dash d-flex">
