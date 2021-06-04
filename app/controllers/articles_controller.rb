@@ -13,6 +13,11 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def mark_as_done
+    @article = Article.find(params[:id])
+    @article.done!
+  end
+
   private
 
   def article_params
