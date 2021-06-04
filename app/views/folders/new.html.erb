@@ -1,8 +1,9 @@
-<%= simple_form_for @folder do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :color %>
-  <%= f.input :image %>
-  <%= f.button :submit %>
-<% end %>
-
+<div class="mx-5">
+  <%= simple_form_for @folder do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :color %>
+    <%= f.input :image %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
