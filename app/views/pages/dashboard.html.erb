@@ -13,12 +13,10 @@
       </div>
       <div class="text-center">
         <div class="dashboard-button">
-          <%= render partial: "shared/dashboard_button", locals: {title: "Search for article", buttontype: "button-black-dash", link: ""} %>
-          <%= render partial: "shared/dashboard_button", locals: {title: "Add article", buttontype: "button-black-dash", link: new_article_path } %>
-          <%= render partial: "shared/dashboard_button", locals: {title: "Add connection", buttontype: "button-ghost-dash", link: new_connection_path } %>
-          <%= render partial: "shared/dashboard_button", locals: {title: "Add folder", buttontype: "button-ghost-dash", link: new_folder_path } %>
+          <div class="my-3 ml-3 w-25">
+            <a class="button-black-dash" href="/folders/new">Add folder</a>
+            </div>
         </div>
       </div>
     </div>
   </div>
-</div>
