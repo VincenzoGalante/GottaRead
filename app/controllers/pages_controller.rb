@@ -15,4 +15,9 @@ class PagesController < ApplicationController
     @missed_article = Article.missed
     # @next_article = Article.where("reminder < #{Date.today}")
   end
+
+
+  def archive
+    @articles = Article.joins(:folders).where(status: "done").order("reminder ASC NULLS LAST")
+  end
 end
