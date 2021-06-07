@@ -1,17 +1,19 @@
 .banner {
   color: $gray;
-  height: 800px;
+  height: 1000px;
   display: flex;
-  background-color: #F1ECE4;
+  background-color: rgb(249,247,245);
   justify-content: space-around;
   background-size: cover;
+  margin-left: 150px;
+  margin-right: 150px;
 
 .header {
   width: 77%;
   padding: 100px 0 40px 150px;
 }
 .secondheader {
-  width: 60%;
+  width: 80%;
   padding: 10px 40px 10px 150px;
 }
   h1 {
