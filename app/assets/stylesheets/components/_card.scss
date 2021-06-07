@@ -32,6 +32,15 @@
   background-color: #f7f3ed;
   color: #474747;
   text-align: center;
+
+  a {
+  text-decoration: none;
+  color: grey;
+  }
+
+  a:hover {
+    color: black;
+  }
 }
 
 .card_border {

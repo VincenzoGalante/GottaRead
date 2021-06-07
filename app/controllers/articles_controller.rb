@@ -7,7 +7,10 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
-      redirect_to root_path
+      @connection = Connection.new(folder_id: params[:folder], article_id: @article.id)
+      if @connection.save
+        redirect_to dashboard_path
+      end
     else
       render :new
     end
