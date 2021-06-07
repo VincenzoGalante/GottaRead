@@ -13,7 +13,9 @@ class PagesController < ApplicationController
     @tennis_articles = Article.joins(:folders).where(folders:{title:"Tennis"})
     @articles = Article.all
     @missed_article = Article.missed
-    # @next_article = Article.where("reminder < #{Date.today}")
+    #ordering descendant
+    #@next_article = Article.where("#{reminder.to_date.to_s} > #{Date.today.to_s}")
+    #ordering ascendant
   end
 
 
