@@ -12,7 +12,7 @@ class PagesController < ApplicationController
     @neuroscience_articles = Article.joins(:folders).where(folders:{title:"Neuroscience"}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST")
     @tennis_articles = Article.joins(:folders).where(folders:{title:"Tennis"}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST")
     @articles = Article.all
-    @missed_article = Article.missed
+    @missed_article = Article.missed.order("reminder DESC NULLS LAST")
     #ordering descendant
     #@next_article = Article.where("#{reminder.to_date.to_s} > #{Date.today.to_s}")
     #ordering ascendant
