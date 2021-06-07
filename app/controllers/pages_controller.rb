@@ -12,4 +12,9 @@ class PagesController < ApplicationController
     @neuroscience_articles = Article.joins(:folders).where(folders:{title:"Neuroscience"})
     @tennis_articles = Article.joins(:folders).where(folders:{title:"Tennis"})
   end
+
+
+  def archive
+    @articles = Article.joins(:folders).where(status: "done").order("reminder ASC NULLS LAST")
+  end
 end
