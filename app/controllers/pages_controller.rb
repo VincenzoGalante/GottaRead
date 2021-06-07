@@ -8,8 +8,13 @@ class PagesController < ApplicationController
 
   def dashboard
     @folders = Folder.all
-    @freediving_articles = Article.joins(:folders).where(folders:{title:"Freediving"})
-    @neuroscience_articles = Article.joins(:folders).where(folders:{title:"Neuroscience"})
-    @tennis_articles = Article.joins(:folders).where(folders:{title:"Tennis"})
+    @freediving_articles = Article.joins(:folders).where(folders:{title:"Freediving"}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST")
+    @neuroscience_articles = Article.joins(:folders).where(folders:{title:"Neuroscience"}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST")
+    @tennis_articles = Article.joins(:folders).where(folders:{title:"Tennis"}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST")
+  end
+
+
+  def archive
+    @articles = Article.joins(:folders).where(status: "done").order("reminder ASC NULLS LAST")
   end
 end

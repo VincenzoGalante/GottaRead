@@ -1,6 +1,6 @@
 .card-img-top {
   margin: 0 auto;
-  border-radius: 2px;
+  border-radius: 10px;
   height: 200px;
   object-fit: cover;
 }
@@ -11,18 +11,22 @@
 
 .card{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   border: 2px solid white;
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
+  order: 3;
 }
 
 .card:hover{
-  transform: scale(1.05);
-  transition: box-shadow 500ms ease,transform 50ms ease;
+  transform: scale(1.01);
+  transition: box-shadow 500ms ease,transform 20ms ease;
   box-shadow: -10px 10px 0 #474747;
   }
 
 .card-footer {
+  font-size: 13px;
   display: flex;
   justify-content: space-between;
   background-color: #f7f3ed;
@@ -31,6 +35,12 @@
 }
 
 .card_border {
- border-color: red;
  border-radius: 10px;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }

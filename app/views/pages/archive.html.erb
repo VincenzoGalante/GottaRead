@@ -1,15 +1,14 @@
-<div class="card">
-  <%= image_tag folder_picture, class:"card-img-top card_border", alt: "Folder picture" %>
-  <div class="card-body">
-    <h5 class="card-title"><%= title %></h5>
-      <% articles.each do |article| %>
+<p><h5 class="card-title_archive">Archive</h5></p>
+<div class="archive_card">
+      <% @articles.each do |article| %>
 
         <p class="card-text">
           <div class="folder-card-text">
 
-            <div class="folder_card_container">
+            <div class="folder_card_container_archive">
               <div class="folder_card_top">
                 <%= link_to article.title, article.url, target: :_blank %><br>
+
                 <span id="article_notes"><%= article.note %></span>
               </div>
               <div class="folder_card_bottom">
@@ -35,10 +34,4 @@
       <%end%>
 
   </div>
-
-  <div class="card-footer">
-      <div><i class="fas fa-share"></i> Share</div>
-      <div><i class="fas fa-plus-circle"></i> Add article</div>
-  </div>
 </div>
-
