@@ -1,13 +1,34 @@
-<div class="card1 w-100 p-3 mr-1">
-  <h5 class="card-title"><%= title %></h5>
-    <% @missed_article.first(3).each do |article| %>
-      <div class="w-100 d-flex">
-        <div><h6><%=article.title%></h6></div>
-        <div><h6><%=article.note %></h6></div>
-          <% if article.reminder %>
-            <div><h6><%=article.reminder.strftime("%A") %></h6></div>
-          <% end %>
-        <div><h6>Importance: <%=article.importance %></h6></div>
-      </div>
-    <%end%>
+<div class="card1 w-50 ml-3">
+  <div class="card-body">
+    <h5 class="card-title"><%= title %></h5>
+      <% @missed_article.first(3).each do |article| %>
+        <p class="card-text">
+          <div class="folder-card-text">
+
+            <div class="folder_card_container">
+              <div class="folder_card_top">
+                <%= link_to article.title, article.url, target: :_blank %><br>
+                <span id="article_notes"><%= article.note %></span>
+              </div>
+              <div class="folder_card_bottom">
+                <div class="folder_card_bottom_left">
+                <i class="far fa-bell"></i> <%= article.reminder.strftime("%A") %>
+                </div>
+                <div class="folder_card_bottom_right">
+                <%= article.importance %> <i class="far fa-star"></i><br>
+
+                  <% if article.status == "to_read" %>
+                    <%= link_to "To read", mark_as_done_path(article) %>
+                  <% elsif article.status == "missed"%>
+                    <%= link_to "Missed", mark_as_done_path(article) %>
+                  <% elsif article.status == "done"%>
+                    <%= link_to "Done", mark_as_done_path(article) %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </p>
+      <%end%>
+  </div>
 </div>
