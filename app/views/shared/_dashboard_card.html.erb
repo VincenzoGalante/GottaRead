@@ -3,15 +3,29 @@
   <div class="card-body">
     <h5 class="card-title"><%= title %></h5>
       <% articles.each do |article| %>
+
         <p class="card-text">
           <div class="folder-card-text">
-            <ul>
-              <li><%= link_to article.title, article.url, target: :_blank %><br>
-                <%= link_to article.status, mark_as_done_path(article) %></li>
-            </ul>
+
+            <div class="folder_card_container">
+              <div class="folder_card_top">
+                <%= link_to article.title, article.url, target: :_blank %><br>
+                <span id="article_notes"><%= article.note %></span>
+              </div>
+              <div class="folder_card_bottom">
+                <div class="folder_card_bottom_left">
+                <i class="far fa-bell"></i> <%= article.reminder.strftime("%d.%m.%Y %H:%M") %>
+                </div>
+                <div class="folder_card_bottom_right">
+                <%= article.importance %> <i class="far fa-star"></i><br>
+                <%= Status(article.status) %>
+                </div>
+              </div>
+            </div>
           </div>
         </p>
       <%end%>
+
   </div>
 
   <div class="card-footer">
@@ -19,3 +33,4 @@
       <div><i class="fas fa-plus-circle"></i> Add article</div>
   </div>
 </div>
+
