@@ -11,5 +11,8 @@ class PagesController < ApplicationController
     @freediving_articles = Article.joins(:folders).where(folders:{title:"Freediving"})
     @neuroscience_articles = Article.joins(:folders).where(folders:{title:"Neuroscience"})
     @tennis_articles = Article.joins(:folders).where(folders:{title:"Tennis"})
+    @articles = Article.all
+    @missed_article = Article.missed
+    # @next_article = Article.where("reminder < #{Date.today}")
   end
 end

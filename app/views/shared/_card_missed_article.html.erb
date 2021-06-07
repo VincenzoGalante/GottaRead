@@ -1,43 +1,13 @@
-<div class="card1 w-100 p-3 text-center ml-1">
-  <br>
-  <div class="">
-    <h2><%= title %></h2>
-  </div>
-  <br>
-  <div class="w-100">
-    <div class="row">
-      <div class="reminder col-4">
-        Yesterday
+<div class="card1 w-100 p-3 mr-1">
+  <h5 class="card-title"><%= title %></h5>
+    <% @missed_article.first(3).each do |article| %>
+      <div class="w-100 d-flex">
+        <div><h6><%=article.title%></h6></div>
+        <div><h6><%=article.note %></h6></div>
+          <% if article.reminder %>
+            <div><h6><%=article.reminder.strftime("%A") %></h6></div>
+          <% end %>
+        <div><h6>Importance: <%=article.importance %></h6></div>
       </div>
-      <div class="article-title col-4">
-        Anyone can get Super-Hearing
-      </div>
-      <div class="folder-title col-4">
-        Neuroscience
-      </div>
-    </div>
-    <div class="row">
-      <div class="reminder col-4">
-        2 days ago
-      </div>
-      <div class="article-title col-4">
-        Where to buy the best socks in Brasil
-      </div>
-      <div class="folder-title col-4">
-        Socks
-      </div>
-    </div>
-    <div class="row">
-      <div class="reminder col-4">
-        3 days ago
-      </div>
-      <div class="article-title col-4">
-          Observing the underwater world, in complete safety
-      </div>
-      <div class="folder-title col-4">
-        Diving
-      </div>
-    </div>
-    <br>
-  </div>
+    <%end%>
 </div>

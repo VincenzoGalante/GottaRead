@@ -1,1 +1,62 @@
-_wider-card-for-dashboard.scss
+
+.folder-card-text {
+}
+
+.folder_card_container {
+  border-radius: 10px;
+  border: 2px solid #bab5ae;
+}
+
+.card1:hover {
+  background-color: #d1cbc4;
+}
+
+.folder_card_top {
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+
+  #article_notes {
+    font-size: 13px;
+  }
+
+  a {
+  font-size: 15px;
+  text-decoration: none;
+  color: grey;
+  }
+
+  a:hover {
+    color: black;
+  }
+}
+
+.folder_card_bottom {
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  display: flex;
+  align-items: flex-end;
+  font-size: 13px;
+  justify-content: space-between;
+}
+
+.folder_card_bottom_left {
+  text-align: left;
+}
+
+.folder_card_bottom_right {
+  text-align: right;
+  text-decoration: none;
+
+  a {
+    color: grey;
+  }
+
+  a:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
