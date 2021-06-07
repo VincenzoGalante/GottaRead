@@ -1,7 +1,7 @@
 <div class="card1 w-50 mr-3">
   <div class="card-body">
     <h5 class="card-title"><%= title %></h5>
-      <% @articles.first(3).each do |article| %>
+      <% @next_articles.first(3).each do |article| %>
         <p class="card-text">
           <div class="folder-card-text">
 
@@ -12,7 +12,7 @@
               </div>
               <div class="folder_card_bottom">
                 <div class="folder_card_bottom_left">
-                <i class="far fa-bell"></i> <%= article.reminder.strftime("%A") %>
+                <i class="far fa-bell"></i> <%= article.reminder.strftime("%A %H:%M") %>
                 </div>
                 <div class="folder_card_bottom_right">
                 <%= article.importance %> <i class="far fa-star"></i><br>

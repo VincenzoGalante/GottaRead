@@ -14,8 +14,7 @@ class PagesController < ApplicationController
     @articles = Article.all
     @missed_article = Article.missed.order("reminder DESC NULLS LAST")
     #ordering descendant
-    #@next_article = Article.where("#{reminder.to_date.to_s} > #{Date.today.to_s}")
-    #ordering ascendant
+    @next_articles = Article.where("reminder > ?", Time.zone.now)    #ordering ascendant
   end
 
 
