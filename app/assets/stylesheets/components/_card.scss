@@ -16,6 +16,7 @@
   border: 2px solid white;
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
+  order: 3;
 }
 
 .card:hover{
@@ -37,3 +38,9 @@
  border-radius: 10px;
 }
 
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
