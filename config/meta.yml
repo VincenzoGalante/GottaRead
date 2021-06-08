@@ -1,5 +1,5 @@
 meta_product_name: "GottaRead"
 meta_title: "GottaRead - The better way to organize your articles"
-meta_description: "With GottaRead you will never forget to read articles. Dive deeper into topics and master your bookmark mess."
-meta_image: "meta_image.jpg" # should exist in `app/assets/images/`
-twitter_account: "@GottaRead"   # required for Twitter Cards
+meta_description: "Never forget to read articles. Dive deeper into topics and master your bookmark mess."
+meta_image: "meta_image.jpg"
+twitter_account: "@GottaRead"
