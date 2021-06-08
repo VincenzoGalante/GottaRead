@@ -90,3 +90,29 @@
         opacity: 0.8;
     }
 }
+
+.dashboard-button {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-item: center;
+  top: 35px;
+  left: 1150px;
+  font-size: 35px;
+  background-color: black;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  opacity: 0.7;
+
+  &:hover {
+    color: white;
+    opacity: 1;
+  }
+
+  a {
+  text-decoration: none;
+  color: white;
+  margin: 0px;
+  }
+}
