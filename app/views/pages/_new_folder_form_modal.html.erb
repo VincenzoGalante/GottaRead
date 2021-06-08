@@ -8,11 +8,10 @@
         </button>
       </div>
       <div class="modal-body">
-          <div class="mx-5">
+          <div class="m-3">
             <%= simple_form_for(folder) do |f| %>
               <%= f.input :title %>
               <%= f.input :description %>
-              <%= f.input :color %>
               <%= f.input :photo, as: :file %>
             <% end %>
           </div>
@@ -24,3 +23,4 @@
     </div>
   </div>
 </div>
+input_html: { class: 'button-ghost' }

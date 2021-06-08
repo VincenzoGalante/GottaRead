@@ -16,6 +16,7 @@ class PagesController < ApplicationController
     #ordering descendant
     @next_articles = Article.where("reminder > ?", Time.zone.now).order("reminder ASC NULLS LAST")    #ordering ascendant
     @folder = Folder.new
+    @article = Article.new
   end
 
 
