@@ -36,8 +36,8 @@
   </div>
 
   <div class="card-footer">
-      <div><i class="fas fa-share"></i> Share</div>
-      <div><i class="fas fa-plus-circle"></i> Add article</div>
+      <div><i class="fas fa-share"></i><%= link_to " Share", new_article_path %></div>
+      <div><i class="fas fa-plus-circle"></i><%= link_to " Add article", new_article_path(folder_id_for_new_article: folder_id) %></div>
   </div>
 </div>
 

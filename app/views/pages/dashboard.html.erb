@@ -7,12 +7,12 @@
   <br>
     <div class="bottom-part-dash d-flex">
       <div class="card-deck">
-        <%= render partial: "shared/dashboard_card", locals: {title: "Freediving", articles: @freediving_articles, folder_picture: image_path("freediving_folder.jpeg") } %>
-        <%= render partial: "shared/dashboard_card", locals: {title: "Tennis", articles: @tennis_articles, folder_picture: image_path("tennis_folder.jpeg") } %>
-        <%= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", articles: @neuroscience_articles, folder_picture: image_path("neuroscience_folder.jpeg")} %>
+        <%= render partial: "shared/dashboard_card", locals: {folder_id: Folder.first.id, title: "Freediving", articles: @freediving_articles, folder_picture: image_path("freediving_folder.jpeg") } %>
+        <%= render partial: "shared/dashboard_card", locals: {folder_id: Folder.second.id, title: "Tennis", articles: @tennis_articles, folder_picture: image_path("tennis_folder.jpeg") } %>
+        <%= render partial: "shared/dashboard_card", locals: {folder_id: Folder.third.id, title: "Neuroscience", articles: @neuroscience_articles, folder_picture: image_path("neuroscience_folder.jpeg")} %>
       </div>
-      <div class="round_corner dashboard-button">
-        <a href="/folders/new"><i class="fas fa-folder-plus"></i></a>
-      </div>
+     <div class="round_corner dashboard-button">
+     <a href="/folders/new"><i class="fas fa-folder-plus"></i></a>
     </div>
+  </div>
 </div>
