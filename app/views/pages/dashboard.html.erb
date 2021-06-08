@@ -11,12 +11,8 @@
         <%= render partial: "shared/dashboard_card", locals: {title: "Tennis", articles: @tennis_articles, folder_picture: image_path("tennis_folder.jpeg") } %>
         <%= render partial: "shared/dashboard_card", locals: {title: "Neuroscience", articles: @neuroscience_articles, folder_picture: image_path("neuroscience_folder.jpeg")} %>
       </div>
-      <div class="text-center">
-        <div class="dashboard-button">
-          <div class="my-3 ml-3 w-25">
-            <a class="button-black-dash" href="/folders/new">Add folder</a>
-            </div>
-        </div>
+      <div class="round_corner dashboard-button">
+        <a href="/folders/new"><i class="fas fa-folder-plus"></i></a>
       </div>
     </div>
-  </div>
+</div>
