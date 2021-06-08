@@ -21,6 +21,6 @@ class FoldersController < ApplicationController
   private
 
   def folders_params
-    params.require(:folder).permit(:title, :description, :image, :color)
+    params.require(:folder).permit(:title, :description, :image, :color, :photo)
   end
 end
