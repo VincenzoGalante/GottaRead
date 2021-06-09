@@ -7,7 +7,11 @@
 }
 
 .folder_card_container:hover {
-  background-color: #d1cbc4;
+  border-color: black;
+  transform: scale(1.01);
+  transition: box-shadow 500ms ease,transform 10ms ease;
+  box-shadow: -10px 10px 0 #474747;
+  cursor: pointer;
 }
 
 .folder_card_top {

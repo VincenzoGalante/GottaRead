@@ -3,12 +3,12 @@
   border-radius: 10px;
   height: 200px;
   object-fit: cover;
+  width: 100%;
 }
 .card-title{
   font-family: 'Inter', sans-serif;
   font-weight: 500;
 }
-
 .crd-body {
   height: 40vh;
   overflow-y: auto;
@@ -20,9 +20,9 @@ h5.card-title {
 }
 
 .card:hover{
-  transform: scale(1.01);
-  transition: box-shadow 500ms ease,transform 20ms ease;
-  box-shadow: -10px 10px 0 #474747;
+  // transform: scale(1.01);
+  // transition: box-shadow 500ms ease,transform 20ms ease;
+  // box-shadow: -10px 10px 0 #474747;
   }
 
 .card-footer {
@@ -79,6 +79,7 @@ h5.card-title {
   height: 1px;
 }
 
-
-
-
+.card_emoticon_push {
+  display: flex;
+  justify-content: space-between;
+}

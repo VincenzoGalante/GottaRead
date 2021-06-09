@@ -27,11 +27,11 @@
           </li>
 
             <li class="nav-item active mr-3">
-              <a class="button-ghost" href=" /users/sign_in">Log in</a>
+              <a class="button-ghost" href=" /users/sign_up">Sign up</a>
             </li>
 
             <li class="nav-item active mr-3">
-              <a class="button-black" href=" /users/sign_up">Sign up</a>
+              <a class="button-black" href=" /users/sign_in">Log in</a>
             </li>
 
           <% else signed_in? == true %>
@@ -41,26 +41,23 @@
           </li>
 
           <li class="nav-item active mr-3">
-             <a class="nav-link" href="#">Careers</a>
-          </li>
-
-          <li class="nav-item active mr-3">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-
-          <li class="nav-item active mr-3">
             <a class="nav-link" href="/articles">Search</a>
+          </li>
 
            <li class="nav-item active mr-3">
             <a class="nav-link" href="/archive">Archive</a>
            </li>
 
             <li class="nav-item active mr-3">
-              <a class="button-ghost" href=" /dashboard">Dashboard</a>
+              <a class="nav-link" href=" /dashboard">Dashboard</a>
             </li>
 
-            <li class="nav-item active mr-3">
-               <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "button-black" %>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <span>
+                  <i class="fas fa-sign-out-alt logoutbutton"></i>
+                </span>
+              <% end %>
             </li>
 
           <% end %>

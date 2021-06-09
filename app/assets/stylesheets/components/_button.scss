@@ -96,8 +96,8 @@
   position: fixed;
   justify-content: center;
   align-item: center;
-  top: 35px;
-  left: 1150px;
+  top: 26px;
+  right: 56px;
   font-size: 35px;
   background-color: black;
   width: 54px;
@@ -114,5 +114,16 @@
   text-decoration: none;
   color: white;
   margin: 0px;
+  }
+}
+
+.logoutbutton {
+  text-decoration: none;
+  margin-top: 13px;
+  color: grey;
+  opacity: 0.7;
+    &:hover {
+    color: black;
+    opacity: 1;
   }
 }

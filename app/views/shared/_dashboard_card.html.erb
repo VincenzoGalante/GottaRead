@@ -6,10 +6,24 @@
           <p class="card-text">
             <div class="folder-card-text">
 
-              <div class="folder_card_container">
-                <div class="folder_card_top">
-                  <%= link_to article.title, article.url, target: :_blank %><br>
-                  <span id="article_notes"><%= article.note %></span>
+
+            <div class="folder_card_container">
+              <div class="folder_card_top">
+                <%= link_to article.title, article.url, target: :_blank %><br>
+                <span id="article_notes"><%= article.note %></span>
+              </div>
+              <div class="folder_card_bottom">
+                <div class="folder_card_bottom_left">
+                <i class="far fa-bell"></i> <%= article.reminder.strftime("%d.%m.%y, %H:%M") %> -
+
+                <% if article.status == "to_read" %>
+                  <%= "To read" %>
+                <% elsif article.status == "missed"%>
+                  <%= "Missed" %>
+                <% elsif article.status == "done"%>
+                  <%= "Done" %>
+                <% end %>
+
                 </div>
                 <div class="folder_card_bottom">
                   <div class="folder_card_bottom_left">
@@ -18,13 +32,13 @@
                   <div class="folder_card_bottom_right">
                   <%= article.importance %> <i class="far fa-star"></i><br>
 
-                    <% if article.status == "to_read" %>
-                      <%= link_to "To read", mark_as_done_path(article) %>
-                    <% elsif article.status == "missed"%>
-                      <%= link_to "Missed", mark_as_done_path(article) %>
-                    <% elsif article.status == "done"%>
-                      <%= link_to "Done", mark_as_done_path(article) %>
-                    <% end %>
+                  <% if article.status == "to_read" %>
+                    <%= link_to "Mark as read", mark_as_done_path(article) %>
+                  <% elsif article.status == "missed"%>
+                    <%= link_to "Mark as read", mark_as_done_path(article) %>
+                  <% elsif article.status == "done"%>
+                    <%= link_to "Done", mark_as_done_path(article) %>
+                  <% end %>
 
                   </div>
                 </div>
