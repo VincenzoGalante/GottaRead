@@ -44,9 +44,18 @@
 
   </div>
 
-  <div class="card-footer">
-      <div><i class="fas fa-share"></i><%= link_to " Share", new_article_path %></div>
-      <div><i class="fas fa-plus-circle"></i><%= link_to " Add article", new_article_path(folder_id_for_new_article: folder_id) %></div>
+  <div class="card-footer d-flex justify-content-between">
+      <div>
+        <i class="fas fa-share"></i><%= link_to " Share", new_article_path %>
+      </div>
+      <div>
+        <a href="/articles/new" data-toggle="modal" data-target="#exampleModal">
+          <i class="fas fa-plus-circle"></i>
+          Add article
+        </a>
+      </div>
   </div>
 </div>
+<%= render partial: "new_article_form_modal", locals: {article: @article} %>
+
 
