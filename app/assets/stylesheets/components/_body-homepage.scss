@@ -1,5 +1,5 @@
 .body-homepage{
-  text-align: center;
+  // text-align: center;
   h1 {
     font-weight: 300;
     font-size: 48px
@@ -25,14 +25,23 @@
   margin-bottom: 50px;
 }
 
+.main-container {
+  width: 82%;
+  margin: 0 auto;
+}
+
 .lp_usp_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-itmes: baseline;
 }
 
-.lp_usp_text{
-  margin: 100px;
+.lp_usp_text_left {
+  padding: 100px 100px 100px 0;
+}
+
+.lp_usp_text_right {
+  padding: 100px 0px 100px 100px;
 }
 
 .footer {

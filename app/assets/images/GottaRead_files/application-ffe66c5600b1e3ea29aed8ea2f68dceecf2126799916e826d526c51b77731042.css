@@ -19490,10 +19490,10 @@ readers do not read off random characters that represent icons */
 }
 
 /* line 9, app/assets/stylesheets/components/_banner.scss */
-.banner .header {
+/*.banner .header {
   width: 77%;
   padding: 100px 0 40px 150px;
-}
+}*/
 
 /* line 13, app/assets/stylesheets/components/_banner.scss */
 .banner .secondheader {
@@ -19502,10 +19502,10 @@ readers do not read off random characters that represent icons */
 }
 
 /* line 17, app/assets/stylesheets/components/_banner.scss */
-.banner h1 {
+/*.banner h1 {
   font-size: 77px;
   font-weight: 400;
-}
+}*/
 
 /* line 21, app/assets/stylesheets/components/_banner.scss */
 .banner .eachletter:hover {
