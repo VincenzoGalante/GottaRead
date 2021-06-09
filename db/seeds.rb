@@ -51,14 +51,6 @@ puts "Created user 👤"
     user_id: User.first.id
     )
 
-    Folder.create!(
-    title: "Inbox",
-    description: "Unsorted articles",
-    image: "",
-    color: "white",
-    user_id: User.first.id
-    )
-
 puts "Created folder 🗂"
 
 
