@@ -11,10 +11,9 @@ class FoldersController < ApplicationController
     @folder = Folder.new(folders_params)
     @folder.user = current_user
       if @folder.save
-        redirect_to root_path
+        redirect_to dashboard_path
       else
         render :new
-      raise
       end
   end
 
