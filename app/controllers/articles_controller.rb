@@ -3,6 +3,15 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def index
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR note ILIKE :query"
+      @articles = Article.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @articles = Article.all
+    end
+  end
+
   def create
     @article = Article.new(article_params)
     @article.user = current_user
