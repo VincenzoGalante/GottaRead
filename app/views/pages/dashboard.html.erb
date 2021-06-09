@@ -12,8 +12,12 @@
         <%= render partial: "shared/dashboard_card", locals: {folder_id: folder.id, title: folder.title, articles: @folder_articles, folder_picture: image_path(folder.image) } %>
       <% end %>
       </div>
-     <div class="round_corner dashboard-button">
-     <a href="/folders/new"><i class="fas fa-folder-plus"></i></a>
+    <div class="round_corner dashboard-button">
+      <a href="/folders/new" data-toggle="modal" data-target="#folderModal">
+        <i class="fas fa-folder-plus"></i>
+      </a>
     </div>
   </div>
 </div>
+
+<%= render partial: "new_folder_form_modal", locals: {folder: @folder} %>
