@@ -14,13 +14,12 @@ class FoldersController < ApplicationController
         redirect_to root_path
       else
         render :new
-      raise
       end
   end
 
   private
 
   def folders_params
-    params.require(:folder).permit(:title, :description, :image, :color)
+    params.require(:folder).permit(:title, :description, :image, :color, :photo)
   end
 end
