@@ -11,14 +11,14 @@
               </div>
               <div class="folder_card_bottom">
                 <div class="folder_card_bottom_left">
-                <i class="far fa-bell"></i> <%= article.reminder.strftime("%A %H:%M") %> -
+                <i class="far fa-bell"></i> <%= article.reminder.strftime("%A %H:%M") %>
 
                   <% if article.status == "to_read" %>
-                    <%= "To read", class: "badge badge-pill badge-primary" %>
+                    <div class="badge badge-pill badge-light green_pill">To read</div>
                   <% elsif article.status == "missed"%>
-                    <%= "Missed", class: "badge badge-pill badge-danger" %>
+                    <div class="badge badge-pill badge-danger red_pill">Missed</div>
                   <% elsif article.status == "done"%>
-                    <%= "Done", class: "badge badge-pill badge-success" %>
+                    <div class="badge badge-pill badge-info blue_pill">Done</div>
                   <% end %>
 
                 </div>
