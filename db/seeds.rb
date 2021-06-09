@@ -51,14 +51,6 @@ puts "Created user 👤"
     user_id: User.first.id
     )
 
-    Folder.create!(
-    title: "Inbox",
-    description: "Unsorted articles",
-    image: "",
-    color: "white",
-    user_id: User.first.id
-    )
-
 puts "Created folder 🗂"
 
 
@@ -69,7 +61,7 @@ puts "Created folder 🗂"
       url: "https://blogbuzzter.de/2020/02/alexey-molchanov-weltrekord-im-freediving/",
       title: "Molchanov Worldrecord",
       note: "Story of a self-thought Pythong developer",
-      status: 1,
+      status: 0,
       importance: rand(0..5),
       reminder: DateTime.strptime("2021-02-10 10:00:00","%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
@@ -147,7 +139,7 @@ puts "Created folder 🗂"
       url: "https://www.tennismindgame.com/serena-williams-tennis-lessons.html",
       title: "Serena Williams Masterclass Video Course Review",
       note: "Masterclass review",
-      status: 1,
+      status: 0,
       importance: rand(0..5),
       reminder: DateTime.strptime("2021-07-01 13:15:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id

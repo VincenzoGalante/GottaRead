@@ -1,15 +1,16 @@
 
 <div class="mx-3 mb-3">
   <div class="card-top w-100 d-flex mb-3">
-    <%= render partial: "shared/card_next_article.html", locals: {title: "Next article to read"} %>
-    <%= render partial: "shared/card_missed_article", locals: {title: "Missed article to read"} %>
+    <%= render partial: "shared/card_next_article.html", locals: {title: "Next articles to read"} %>
+    <%= render partial: "shared/card_missed_article", locals: {title: "Missed articles"} %>
   </div>
   <br>
     <div class="bottom-part-dash d-flex">
       <div class="card-deck">
-        <%= render partial: "shared/dashboard_card", locals: {folder_id: Folder.first.id, title: "Freediving", articles: @freediving_articles, folder_picture: image_path("freediving_folder.jpeg") } %>
-        <%= render partial: "shared/dashboard_card", locals: {folder_id: Folder.second.id, title: "Tennis", articles: @tennis_articles, folder_picture: image_path("tennis_folder.jpeg") } %>
-        <%= render partial: "shared/dashboard_card", locals: {folder_id: Folder.third.id, title: "Neuroscience", articles: @neuroscience_articles, folder_picture: image_path("neuroscience_folder.jpeg")} %>
+        <% @folders.each do |folder| %>
+        <% @folder_articles = Article.joins(:folders).where(folders:{title: folder.title}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST") %>
+        <%= render partial: "shared/dashboard_card", locals: {folder_id: folder.id, title: folder.title, articles: @folder_articles, folder_picture: image_path(folder.image) } %>
+      <% end %>
       </div>
     <div class="round_corner dashboard-button">
       <a href="/folders/new" data-toggle="modal" data-target="#folderModal">
