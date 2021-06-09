@@ -31,9 +31,9 @@ class ArticlesController < ApplicationController
     redirect_to dashboard_path
   end
 
-  def show
-    article = Article.find(params[:id])
-  end
+  # def show
+  #   article = Article.find(params[:id])
+  # end
 
   private
 

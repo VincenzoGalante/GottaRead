@@ -13,13 +13,13 @@
                 <div class="folder_card_bottom_left">
                 <i class="far fa-bell"></i> <%= article.reminder.strftime("%A %H:%M") %> -
 
-                <% if article.status == "to_read" %>
-                  <%= "To read" %>
-                <% elsif article.status == "missed"%>
-                  <%= "Missed" %>
-                <% elsif article.status == "done"%>
-                  <%= "Done" %>
-                <% end %>
+                  <% if article.status == "to_read" %>
+                    <%= "To read", class: "badge badge-pill badge-primary" %>
+                  <% elsif article.status == "missed"%>
+                    <%= "Missed", class: "badge badge-pill badge-danger" %>
+                  <% elsif article.status == "done"%>
+                    <%= "Done", class: "badge badge-pill badge-success" %>
+                  <% end %>
 
                 </div>
                 <div class="folder_card_bottom_right">
