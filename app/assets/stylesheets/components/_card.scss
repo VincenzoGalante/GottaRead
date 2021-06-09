@@ -3,6 +3,7 @@
   border-radius: 10px;
   height: 200px;
   object-fit: cover;
+  width: 100%;
 }
 .card-title{
   font-family: 'Inter', sans-serif;
@@ -16,7 +17,6 @@
   border: 2px solid white;
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
-  order: 3;
 }
 
 .card:hover{

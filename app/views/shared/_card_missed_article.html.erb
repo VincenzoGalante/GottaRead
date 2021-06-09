@@ -1,12 +1,12 @@
 <div class="card1 w-50 ml-3">
   <div class="card-body">
-    <h5 class="card-title"><%= title %></h5>
+    <h5 class="card-title"><%= title %> (<%= @missed_article.count %>)</h5>
       <% @missed_article.first(3).each do |article| %>
         <p class="card-text">
           <div class="folder-card-text">
             <div class="folder_card_container">
               <div class="folder_card_top">
-                <span class="card_emoticon_push"><%= link_to article.title, article.url, target: :_blank %> 🔥</span>
+                <span class="card_emoticon_push"><%= link_to article.title, article.url, target: :_blank %> <i class="fab fa-hotjar"></i></span>
                 <span id="article_notes"><%= article.note %></span>
               </div>
               <div class="folder_card_bottom">
