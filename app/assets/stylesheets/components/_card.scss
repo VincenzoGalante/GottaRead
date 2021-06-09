@@ -20,9 +20,9 @@
 }
 
 .card:hover{
-  transform: scale(1.01);
-  transition: box-shadow 500ms ease,transform 20ms ease;
-  box-shadow: -10px 10px 0 #474747;
+  // transform: scale(1.01);
+  // transition: box-shadow 500ms ease,transform 20ms ease;
+  // box-shadow: -10px 10px 0 #474747;
   }
 
 .card-footer {
@@ -52,4 +52,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.card_emoticon_push {
+  display: flex;
+  justify-content: space-between;
 }
