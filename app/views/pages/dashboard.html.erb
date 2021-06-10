@@ -1,12 +1,12 @@
 
 <div class="mx-3 mb-3">
-  <div class="card-top w-100 d-flex mb-3">
+  <div class="card-top d-flex mb-3">
     <%= render partial: "shared/card_next_article.html", locals: {title: "Next articles to read"} %>
     <%= render partial: "shared/card_missed_article", locals: {title: "Missed articles"} %>
   </div>
   <br>
-    <div class="bottom-part-dash d-flex">
-      <div class="card-deck">
+    <div class="bottom-part-scroll d-flex">
+      <div class="grid_for_cards">
         <% @folders.each do |folder| %>
         <% @folder_articles = Article.joins(:folders).where(folders:{title: folder.title}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST") %>
         <%= render partial: "shared/dashboard_card", locals: {folder_id: folder.id, title: folder.title, articles: @folder_articles, folder_picture: image_path(folder.image) } %>

@@ -2,6 +2,7 @@
   <%= image_tag folder_picture, class:"card-img-top card_border", alt: "Folder picture" %>
   <div class="card-body">
     <h5 class="card-title"><%= title %></h5>
+    <div class="all-articles">
       <% articles.each do |article| %>
         <p class="card-text">
           <div class="folder-card-text">
@@ -41,7 +42,7 @@
           </div>
         </p>
       <%end%>
-
+    </div>
   </div>
 
   <div class="card-footer d-flex justify-content-between">

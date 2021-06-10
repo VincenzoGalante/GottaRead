@@ -12,10 +12,13 @@
 .card{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+
+  width: 30vw;
   border: 2px solid white;
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
+  margin: 0 16px;
 }
 
 .card:hover{
@@ -44,9 +47,10 @@
   border-top-left-radius: 5px;
 }
 
-.card-deck {
+.grid_for_cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -74,4 +78,14 @@
 .green_pill {
   color: hsl(75,100%,40%);
   background-color: hsl(75,100%,90%);
+}
+
+.all-articles {
+  height: 460px;
+  overflow-y: scroll;
+  padding: 0 15px;
+}
+
+.bottom-part-scroll {
+  overflow-x: scroll
 }
