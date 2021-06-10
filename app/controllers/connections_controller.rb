@@ -7,7 +7,7 @@ class ConnectionsController < ApplicationController
 
   def create
     @connection = Connection.new(connection_params)
-    if @connection.save
+    if @connection.save!
       redirect_to root_path
     else
       render :new
@@ -19,5 +19,4 @@ class ConnectionsController < ApplicationController
   def connection_params
     params.require(:connection).permit(:article_id, :folder_id)
   end
-
 end
