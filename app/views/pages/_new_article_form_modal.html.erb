@@ -18,11 +18,9 @@
               <%= f.input :note %>
               <%= hidden_field_tag :folder_id, folder_id %>
               <%= f.button :submit, "Create article", class: "button-black" %>
+              <button type="button" class="button-ghost" data-dismiss="modal">Close</button>
             <% end %>
           </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="button-ghost" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

@@ -19,4 +19,5 @@ class ConnectionsController < ApplicationController
   def connection_params
     params.require(:connection).permit(:article_id, :folder_id)
   end
+
 end
