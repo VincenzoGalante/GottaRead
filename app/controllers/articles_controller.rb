@@ -15,8 +15,9 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user = current_user
+    @folder = Folder.find(params[:folder_id])
     if @article.save
-      @connection = Connection.new(folder_id: params[:folder], article_id: @article.id)
+      @connection = Connection.new(folder_id: @folder.id, article_id: @article.id)
       if @connection.save!
         redirect_to dashboard_path
       end

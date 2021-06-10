@@ -41,6 +41,7 @@
             </div>
           </div>
         </p>
+
       <%end%>
     </div>
   </div>
@@ -50,13 +51,13 @@
         <i class="fas fa-share"></i><%= link_to " Share", new_article_path %>
       </div>
       <div>
-        <a href="/articles/new" data-toggle="modal" data-target="#exampleModal">
+        <a id="<%= folder_id %>"href="/articles/new" data-toggle="modal" data-target="#article-modal-<%= folder_id %>">
           <i class="fas fa-plus-circle"></i>
           Add article
         </a>
       </div>
   </div>
 </div>
-<%= render partial: "new_article_form_modal", locals: {article: @article} %>
+
 
 
