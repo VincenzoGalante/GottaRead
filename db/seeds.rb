@@ -59,6 +59,28 @@ file = URI.open('https://www.york.ac.uk/media/study/courses/postgraduate/psychol
     )
   folder_neuro.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
+# file = URI.open('')
+  folder_tennis = Folder.create!(
+    title: "Investing",
+    description: "Folder for my investing related research",
+    image: "neuroscience_folder",
+    color: "purple",
+    user_id: User.first.id
+    )
+  # folder_tennis.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('')
+  folder_tennis = Folder.create!(
+    title: "Soccer",
+    description: "Interesting articles around soccer",
+    image: "neuroscience_folder",
+    color: "green",
+    user_id: User.first.id
+    )
+  # folder_tennis.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+
+
 puts "Created folder 🗂"
 
 
@@ -80,9 +102,9 @@ puts "Created folder 🗂"
       url: "https://gofreediving.co.uk/definitive-guide-frenzel-technique",
       title: "Frenzel Technique",
       note: "Freediving, Frenzel, Diving techniques",
-      status: 0,
+      status: 1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-06-12 13:30:00", "%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-05-12 13:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
@@ -146,9 +168,9 @@ puts "Created folder 🗂"
       url: "https://www.deeperblue.com/history-of-freediving/",
       title: "History of Freediving",
       note: "Gain some knowledge to show of on the next beach party!",
-      status: 0,
+      status: 1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-06-18 12:00:00", "%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-06-03 12:00:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
@@ -409,6 +431,122 @@ puts "Created folder 🗂"
       user_id: User.first.id
     )
 
+    #Investment
+    #32
+    Article.create!(
+      url: "https://www.oldschoolvalue.com/investing-strategy/benjamin-graham-investing-checklist/",
+      title: "Benjamin Graham Investing Checklist",
+      note: "Learn about investing from Grahams approach",
+      status: 1,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-3 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #33
+    Article.create!(
+      url: "https://www.investopedia.com/terms/v/valueinvesting.asp",
+      title: "What Is Value Investing",
+      note: "The definition of Value investing",
+      status: -1,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-07 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+     #34
+    Article.create!(
+      url: "https://www.thebalance.com/best-books-about-investing-4155082",
+      title: "The 12 Best Investing Books of 2021",
+      note: "Books that help me managing my portfolio",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-20 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #35
+    Article.create!(
+      url: "https://www.theguardian.com/business/2021/feb/02/gamestop-shares-plunge-as-traders-dump-stock",
+      title: "GameStop shares plunge as traders dump stock",
+      note: "Review what happened to Gamestop",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-20 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #36
+    Article.create!(
+      url: "https://www.investopedia.com/best-online-brokers-4587872",
+      title: "Best Online Brokers",
+      note: "Might help me with choosing a new broker",
+      status: -1,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-03 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #Soccer
+    #37
+    Article.create!(
+      url: "https://www.transfermarkt.de/ehemaliger-hsv-sturmer-lasogga-will-zuruck-nach-europa-bdquo-das-feuer-brennt-noch-in-mir-ldquo-/view/news/386936",
+      title: "PML returning to HSV?",
+      note: "This is some interesting transfer news",
+      status: 1,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-05 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #38
+    Article.create!(
+      url: "https://www.nytimes.com/2021/04/22/sports/soccer/super-league-soccer.html",
+      title: "Best Online Brokers",
+      note: "Might help me with choosing a new broker",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-20 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #39
+    Article.create!(
+      url: "https://www.investopedia.com/best-online-brokers-4587872",
+      title: "How the Super League Fell Apart",
+      note: "Info on the disaster of the super league",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-20 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #40
+    Article.create!(
+      url: "https://www.manchestereveningnews.co.uk/sport/football/transfer-news/manchester-united-transfer-news-recap-20769466",
+      title: "Manchester United news and transfers RECAP",
+      note: "Manchester United is targeting europes best players",
+      status: -1,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-02 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #41
+    Article.create!(
+      url: "https://www.theperspective.com/debates/sports/premier-league-or-la-liga-which-is-the-best-soccer-league/",
+      title: "PREMIER LEAGUE OR LA LIGA: WHICH IS THE BEST SOCCER LEAGUE?",
+      note: "Might help me with winning future soccer debates",
+      status: -1,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-02 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+
+
+
+
   #HOMELESSARTICLES
     #32
     Article.create!(
@@ -617,6 +755,56 @@ puts "Created articles 🐙🎾🧠 & ❌🏠"
   Connection.create!(
     folder_id: Folder.first.id + 2,
     article_id: Article.first.id + 30,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 3,
+    article_id: Article.first.id + 31,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 3,
+    article_id: Article.first.id + 32,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 3,
+    article_id: Article.first.id + 33,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 3,
+    article_id: Article.first.id + 34,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 3,
+    article_id: Article.first.id + 35,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 4,
+    article_id: Article.first.id + 36,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 4,
+    article_id: Article.first.id + 37,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 4,
+    article_id: Article.first.id + 38,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 4,
+    article_id: Article.first.id + 39,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 4,
+    article_id: Article.first.id + 40,
     )
 
 
