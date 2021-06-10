@@ -12,9 +12,8 @@ class PagesController < ApplicationController
     # @neuroscience_articles = Article.joins(:folders).where(folders:{title:"Neuroscience"}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST")
     # @tennis_articles = Article.joins(:folders).where(folders:{title:"Tennis"}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST")
     @articles = Article.all
-    @missed_article = Article.missed.order("reminder DESC NULLS LAST")
-    #ordering descendant
-    @next_articles = Article.where("reminder > ?", Time.zone.now).order("reminder ASC NULLS LAST")    #ordering ascendant
+    @missed_article = Article.where(status: "missed").order("reminder DESC NULLS LAST")
+    @next_articles = Article.where(status: "to_read").order("reminder ASC NULLS LAST")
     @folder = Folder.new
     @article = Article.new
   end
