@@ -61,9 +61,9 @@ puts "Created folder 🗂"
       url: "https://blogbuzzter.de/2020/02/alexey-molchanov-weltrekord-im-freediving/",
       title: "Molchanov Worldrecord",
       note: "Story of a self-thought Pythong developer",
-      status: 0,
+      status: -1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-02-10 10:00:00","%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-06-10 10:00:00","%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
       )
 
@@ -74,7 +74,7 @@ puts "Created folder 🗂"
       note: "Freediving, Frenzel, Diving techniques",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-11 13:30:00", "%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-06-12 13:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
@@ -85,7 +85,7 @@ puts "Created folder 🗂"
       note: "Turlte Sanctuary, to read for next vacation",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-10 12:00:00", "%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-06-14 12:00:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
@@ -93,10 +93,10 @@ puts "Created folder 🗂"
     Article.create!(
       url: "https://www.bbc.com/news/world-europe-33789773",
       title: "Freediving: The lure of the deep",
-      note: "",
+      note: "Sums up many things about freediving",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-10 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-06-13 12:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
@@ -105,36 +105,104 @@ puts "Created folder 🗂"
       url: "https://theconversation.com/free-divers-have-long-defied-science-and-we-still-dont-really-understand-how-they-go-so-deep-92690",
       title: "Free divers have long defied science",
       note: "Science related freediving article, weekend read",
-      status: 0,
+      status: -1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-13 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-06-5 12:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
-  #TENNIS
     #6
     Article.create!(
-      url: "https://www.nytimes.com/2021/05/31/sports/tennis/2021-french-open-what-to-watch-tuesday.html",
-      title: "2021 French Open",
-      note: "French Open, Sunday read",
-      status: 0,
+      url: "https://www.guinnessworldrecords.com/news/2021/5/freediver-holds-breath-for-almost-25-minutes-breaking-record-660285",
+      title: "Freediving World Record",
+      note: "Fun read about the world record holder in freediving",
+      status: -1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-19 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-06-05 12:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
     #7
+    Article.create!(
+      url: "https://www.deeperblue.com/dealing-risks-associated-freediving/",
+      title: "Dealing With Risks Associated With Freediving",
+      note: "Must read before I go diving again, take notes!",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-17 15:00:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #8
+    Article.create!(
+      url: "https://www.deeperblue.com/history-of-freediving/",
+      title: "History of Freediving",
+      note: "Gain some knowledge to show of on the next beach party!",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-18 12:00:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #9
+    Article.create!(
+      url: "https://unterwasserwelt.de/freediving-der-einstieg/",
+      title: "Getting Started with Apnoe Freediving",
+      note: "Awesome articles with some tipps for beginners",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-20 12:00:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+      )
+
+    #10
+    Article.create!(
+      url: "https://www.outsideonline.com/2409738/freediving-mountaineering-altitude-research",
+      title: "The Hidden Link Between Freediving and Mountaineering",
+      note: "How freediving helps in high altitudes",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-24 12:00:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+      )
+
+    #11
+    Article.create!(
+      url: "https://www.redbull.com/de-de/die-besten-freediving-spots-der-welt",
+      title: "The best Freediving Spots in the World",
+      note: "Freediving spots and experiences",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-25 12:00:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+      )
+
+
+
+  #TENNIS
+    #12
+    Article.create!(
+      url: "https://www.nytimes.com/2021/05/31/sports/tennis/2021-french-open-what-to-watch-tuesday.html",
+      title: "2021 French Open",
+      note: "French Open, Sunday read",
+      status: -1,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-05 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #13
     Article.create!(
       url: "https://www.jhse.ua.es/article/view/2020-v15-n1-ball-change-tennis-match-characteristics-rally-pace-grand-slam-tournaments",
       title: "Scientific effects on ball change in grand slam tournaments",
       note: "Paper on tennis balls",
       status: 0,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-05-23 10:00:00", "%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-06-23 10:00:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
-    #8
+    #14
     Article.create!(
       url: "https://www.tennismindgame.com/serena-williams-tennis-lessons.html",
       title: "Serena Williams Masterclass Video Course Review",
@@ -145,7 +213,7 @@ puts "Created folder 🗂"
       user_id: User.first.id
     )
 
-    #9
+    #15
     Article.create!(
       url: "https://www.bloomberg.com/news/features/2021-03-24/novak-djokovic-other-tennis-players-seek-to-reform-economics-of-the-sport",
       title: "Missed Business Opportunity That Is Pro Tennis",
@@ -156,7 +224,7 @@ puts "Created folder 🗂"
       user_id: User.first.id
     )
 
-    #10
+    #16
     Article.create!(
       url: "https://bleacherreport.com/articles/1857664-why-is-american-tennis-dying",
       title: "Why Is American Tennis Dying?",
@@ -167,8 +235,63 @@ puts "Created folder 🗂"
       user_id: User.first.id
     )
 
+    #17
+    Article.create!(
+      url: "https://www.wired.com/story/how-elite-tennis-players-crank-out-serves-at-150-mph/",
+      title: "How Elite Tennis Players Crank Out Serves at 150 MPH",
+      note: "This might show me how I can serve faster!",
+      status: -1,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-14 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #18
+    Article.create!(
+      url: "http://www.tennisviewmag.com/tennis-view-magazine/article/are-court-surfaces-slowing-down-game-does-it-matter",
+      title: "Are Court Surfaces Slowing Down the Game? Does It Matter?",
+      note: "Why the tennis courts are getting slower, super cool research",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-29 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #19
+    Article.create!(
+      url: "https://www.top-tennis-training.com/roger-federer-footwork-secrets-revealed-3-steps-you-must-copy/",
+      title: "Roger Federer Footwork Secrets Revealed",
+      note: "Federer's split-step is explained in detail",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-29 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #20
+    Article.create!(
+      url: "https://serveandvolleytennis.com/why-did-serve-and-volley-die-out/",
+      title: "Why Did The Serve And Volley Die Out?",
+      note: "Deep dive into serve and volley in the modern game",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-15 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #21
+    Article.create!(
+      url: "https://www.wtatennis.com/news/2161964/french-open-2021-dates-draws-prize-money-and-what-you-need-to-know",
+      title: "French Open 2021: Dates, draws, prize money",
+      note: "How much are the players earning?",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-15 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
   #NEUROSCIENE
-    #11
+    #22
     Article.create!(
       url: "https://www.nature.com/articles/d41586-021-01353-9",
       title: "Activation of retinal neurons triggers tumour",
@@ -179,7 +302,7 @@ puts "Created folder 🗂"
       user_id: User.first.id
     )
 
-    #12
+    #23
     Article.create!(
       url: "https://www.nature.com/articles/s41591-021-01385-8",
       title: "Putting the MD back into MDMA",
@@ -190,7 +313,7 @@ puts "Created folder 🗂"
       user_id: User.first.id
     )
 
-    #13
+    #24
     Article.create!(
       url: "https://www.jneurosci.org/spotlight",
       title: "Annual Report on JNeurosci Spotlight",
@@ -201,30 +324,85 @@ puts "Created folder 🗂"
       user_id: User.first.id
     )
 
-    #14
+    #25
     Article.create!(
       url: "https://neurosciencenews.com/omega-3-psychosis-18527/",
       title: "Low Levels of Omega-3 Associated With Higher Risk of Psychosis",
       note: "Omega 3 and psychosis correlation",
       status: -1,
       importance: rand(0..5),
-      reminder: DateTime.strptime("2021-07-02 12:30:00", "%Y-%m-%d %H:%M:%S"),
+      reminder: DateTime.strptime("2021-05-02 12:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
-    #15
+    #26
     Article.create!(
       url: "https://www.the-scientist.com/reading-frames/opinion-the-overlooked-power-of-inhibitory-neurons-68819",
       title: "Opinion: The Overlooked Power of Inhibitory Neurons",
       note: "Short article, quick read",
-      status: -1,
+      status: 0,
       importance: rand(0..5),
       reminder: DateTime.strptime("2021-07-05 18:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
     )
 
+    #27
+    Article.create!(
+      url: "https://www.nature.com/articles/s41598-019-46877-3",
+      title: "An experimental study of a virtual reality counselling paradigm using embodied self-dialogue",
+      note: "How VR mgiht help with the Solomon’s Paradox",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-07-05 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #28
+    Article.create!(
+      url: "https://www.nature.com/articles/s41598-018-36885-0",
+      title: "Human Mind Control of Rat Cyborg’s Continuous Locomotion with Wireless Brain-to-Brain Interface",
+      note: "BBI experiment with a rat",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-07-02 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #29
+    Article.create!(
+      url: "https://www.the-scientist.com/reading-frames/opinion-the-overlooked-power-of-inhibitory-neurons-68819",
+      title: "Opinion: The Overlooked Power of Inhibitory Neurons",
+      note: "Short article, quick read",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-07-05 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #30
+    Article.create!(
+      url: "https://www.neurotrackerx.com/post/9-major-neuroscience-breakthroughs-of-2020",
+      title: "9 Major Neuroscience Breakthroughs of 2020",
+      note: "Super interesting topics ideal for future deep dives",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-07-03 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
+    #31
+    Article.create!(
+      url: "https://www.neurotrackerx.com/post/why-athletes-arent-super-human-when-it-comes-to-mental-health",
+      title: "Why Athletes Aren’t Super Human When it Comes to Mental Health",
+      note: "Why many athletes suffer from mental health problems",
+      status: 0,
+      importance: rand(0..5),
+      reminder: DateTime.strptime("2021-06-23 18:30:00", "%Y-%m-%d %H:%M:%S"),
+      user_id: User.first.id
+    )
+
   #HOMELESSARTICLES
-    #16
+    #32
     Article.create!(
       url: "wwww.google.com",
       title: "This is a title",
@@ -234,7 +412,7 @@ puts "Created folder 🗂"
       user_id: User.first.id
     )
 
-    #17
+    #33
     Article.create!(
       url: "www.pudim.com.br",
       title: "This is another title",
@@ -304,54 +482,136 @@ puts "Created articles 🐙🎾🧠 & ❌🏠"
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 1,
+    folder_id: Folder.first.id,
     article_id: Article.first.id + 5,
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 1,
+    folder_id: Folder.first.id,
     article_id: Article.first.id + 6,
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 1,
+    folder_id: Folder.first.id,
     article_id: Article.first.id + 7,
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 1,
+    folder_id: Folder.first.id,
     article_id: Article.first.id + 8,
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 1,
+    folder_id: Folder.first.id,
     article_id: Article.first.id + 9,
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 2,
+    folder_id: Folder.first.id,
     article_id: Article.first.id + 10,
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 2,
+    folder_id: Folder.first.id + 1,
     article_id: Article.first.id + 11,
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 2,
+    folder_id: Folder.first.id + 1,
     article_id: Article.first.id + 12,
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 2,
+    folder_id: Folder.first.id + 1,
     article_id: Article.first.id + 13,
     )
 
   Connection.create!(
-    folder_id: Folder.first.id + 2,
+    folder_id: Folder.first.id + 1,
     article_id: Article.first.id + 14,
     )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 15,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 16,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 17,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 18,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 19,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 1,
+    article_id: Article.first.id + 20,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 21,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 22,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 23,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 24,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 25,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 26,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 27,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 28,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 29,
+    )
+
+  Connection.create!(
+    folder_id: Folder.first.id + 2,
+    article_id: Article.first.id + 30,
+    )
+
+
 
 puts "Created connections 🤜🏻🤛🏿"
 
