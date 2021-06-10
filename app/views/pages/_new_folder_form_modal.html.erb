@@ -8,17 +8,16 @@
         </button>
       </div>
       <div class="modal-body">
-          <div class="m-3">
-            <%= simple_form_for(folder) do |f| %>
-              <%= f.input :title %>
-              <%= f.input :description %>
-              <%= f.input :photo, as: :file %>
-            <% end %>
-          </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="button-ghost" data-dismiss="modal">Close</button>
-        <button type="button" class="button-black">Add</button>
+        <div class="m-3">
+          <%= simple_form_for(folder) do |f| %>
+            <%= f.input :title %>
+            <%= f.input :description %>
+            <%= f.input :photo, as: :file %>
+            <br>
+            <button type="button" class="button-ghost" data-dismiss="modal">Close</button>
+            <button type="button" class="button-black">Add</button>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
