@@ -6,7 +6,7 @@
           <div class="folder-card-text">
             <div class="folder_card_container">
               <div class="folder_card_top">
-                <span class="card_emoticon_push"><%= link_to article.title, article.url, target: :_blank %> <i class="fab fa-hotjar"></i></span>
+                <span class="card_emoticon_push"><%= link_to article.title, article.url, target: :_blank %></span>
                 <span id="article_notes"><%= article.note %></span>
               </div>
               <div class="folder_card_bottom">
@@ -16,7 +16,7 @@
                   <% if article.status == "to_read" %>
                     <div class="badge badge-pill badge-light green_pill">To read</div>
                   <% elsif article.status == "missed"%>
-                    <div class="badge badge-pill badge-danger red_pill">Missed</div>
+                    <div class="badge badge-pill badge-danger red_pill">Missed <i class="fab fa-hotjar"></i></div>
                   <% elsif article.status == "done"%>
                     <div class="badge badge-pill badge-info blue_pill">Done</div>
                   <% end %>
