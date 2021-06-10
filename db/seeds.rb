@@ -38,21 +38,26 @@ file = URI.open('https://www.orca.com/img/products/genre/freediving_web.jpg')
     )
  folder_freediving.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
-  Folder.create!(
+file = URI.open('https://www.york.ac.uk/media/study/courses/postgraduate/psychology/newpgcoursepages/msccognitiveneuroscience/cognitive%20neuroscience%20banner.jpg')
+folder_neuroscience = Folder.create!(
     title: "Tennis",
     description: "Folder for my tennis related research",
     image: "tennis_folder",
     color: "yellow",
     user_id: User.first.id
     )
+ folder_neuroscience.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
-  Folder.create!(
+
+file = URI.open('https://www.rnz.de/cms_media/module_img/1170/585304_1_org_220305565.jpg')
+  folder_tennis = Folder.create!(
     title: "Neuroscience",
     description: "For university and PHD research",
     image: "neuroscience_folder",
     color: "red",
     user_id: User.first.id
     )
+  folder_tennis.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 puts "Created folder 🗂"
 
