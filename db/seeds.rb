@@ -28,6 +28,16 @@ puts "Created user 👤"
 
 
 #Creating Folders
+file = URI.open('https://www.york.ac.uk/media/study/courses/postgraduate/psychology/newpgcoursepages/msccognitiveneuroscience/cognitive%20neuroscience%20banner.jpg')
+  folder_neuro = Folder.create!(
+    title: "Neuroscience",
+    description: "For university and PHD research",
+    image: "neuroscience_folder",
+    color: "red",
+    user_id: User.first.id
+    )
+  folder_neuro.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 file = URI.open('https://www.orca.com/img/products/genre/freediving_web.jpg')
  folder_freediving = Folder.create!(
     title: "Freediving",
@@ -49,35 +59,26 @@ folder_tennis = Folder.create!(
  folder_tennis.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 
-file = URI.open('https://www.york.ac.uk/media/study/courses/postgraduate/psychology/newpgcoursepages/msccognitiveneuroscience/cognitive%20neuroscience%20banner.jpg')
-  folder_neuro = Folder.create!(
-    title: "Neuroscience",
-    description: "For university and PHD research",
-    image: "neuroscience_folder",
-    color: "red",
-    user_id: User.first.id
-    )
-  folder_neuro.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
-# file = URI.open('')
-  folder_tennis = Folder.create!(
+file = URI.open('https://specials-images.forbesimg.com/imageserve/1153657433/960x0.jpg?fit=scale')
+  folder_invest = Folder.create!(
     title: "Investing",
     description: "Folder for my investing related research",
     image: "neuroscience_folder",
     color: "purple",
     user_id: User.first.id
     )
-  # folder_tennis.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  folder_invest.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
-# file = URI.open('')
-  folder_tennis = Folder.create!(
+file = URI.open('https://www.onlinefussballmanager.de/img/lp03.png')
+  folder_soccer = Folder.create!(
     title: "Soccer",
     description: "Interesting articles around soccer",
     image: "neuroscience_folder",
     color: "green",
     user_id: User.first.id
     )
-  # folder_tennis.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+folder_soccer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 
 
