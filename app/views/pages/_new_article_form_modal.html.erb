@@ -13,7 +13,7 @@
               <%#= f.input :folder %>
               <%= f.input :url %>
               <%= f.input :title %>
-              <%= f.input :importance, collection: (1..5).to_a, label: "Importance" %>
+              <%= f.input :importance, collection: (1..5).to_a, label: "Importance", input_html: {class: "article_importance_input"} %>
               <%= f.input :reminder, as: :string, required: false, input_html: {class: "datepicker"}  %>
               <%= f.input :note %>
               <%= hidden_field_tag :folder, params[:folder_id_for_new_article] %>
