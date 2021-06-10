@@ -13,15 +13,15 @@
               </div>
               <div class="folder_card_bottom">
                 <div class="folder_card_bottom_left">
-                <i class="far fa-bell"></i> <%= article.reminder.strftime("%d.%m.%y, %H:%M") %> -
+                <i class="far fa-bell"></i> <%= article.reminder.strftime("%d.%m.%y, %H:%M") %>
 
-                <% if article.status == "to_read" %>
-                  <%= "To read" %>
-                <% elsif article.status == "missed"%>
-                  <%= "Missed" %>
-                <% elsif article.status == "done"%>
-                  <%= "Done" %>
-                <% end %>
+                  <% if article.status == "to_read" %>
+                    <div class="badge badge-pill badge-light green_pill">To read</div>
+                  <% elsif article.status == "missed"%>
+                    <div class="badge badge-pill badge-danger red_pill">Missed</div>
+                  <% elsif article.status == "done"%>
+                    <div class="badge badge-pill badge-info blue_pill">Done</div>
+                  <% end %>
 
                 </div>
                 <div class="folder_card_bottom_right">

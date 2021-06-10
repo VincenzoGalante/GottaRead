@@ -14,14 +14,23 @@
               <div class="folder_card_bottom">
                 <div class="folder_card_bottom_left">
                 <i class="far fa-bell"></i> <%= article.reminder.strftime("%d.%m.%Y, %H:%M") %>
+
+                  <% if article.status == "to_read" %>
+                    <div class="badge badge-pill badge-light green_pill">To read</div>
+                  <% elsif article.status == "missed"%>
+                    <div class="badge badge-pill badge-danger red_pill">Missed</div>
+                  <% elsif article.status == "done"%>
+                    <div class="badge badge-pill badge-info blue_pill">Done</div>
+                  <% end %>
+
                 </div>
                 <div class="folder_card_bottom_right">
                 <%= article.importance %> <i class="far fa-star"></i><br>
 
                   <% if article.status == "to_read" %>
-                    <%= link_to "To read", mark_as_done_path(article) %>
+                    <%= link_to "Mark as read", mark_as_done_path(article) %>
                   <% elsif article.status == "missed"%>
-                    <%= link_to "Missed", mark_as_done_path(article) %>
+                    <%= link_to "Mark as read", mark_as_done_path(article) %>
                   <% elsif article.status == "done"%>
                     <%= link_to "Done", mark_as_done_path(article) %>
                   <% end %>
