@@ -17,6 +17,7 @@
               <%= f.input :reminder, as: :string, required: false, input_html: {class: "datepicker"}  %>
               <%= f.input :note %>
               <%= hidden_field_tag :folder_id, folder_id %>
+              <br>
               <%= f.button :submit, "Create article", class: "button-black" %>
               <button type="button" class="button-ghost" data-dismiss="modal">Close</button>
             <% end %>

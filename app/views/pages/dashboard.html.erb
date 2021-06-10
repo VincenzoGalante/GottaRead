@@ -9,7 +9,7 @@
       <div class="grid_for_cards">
         <% @folders.each do |folder| %>
         <% @folder_articles = Article.joins(:folders).where(folders:{title: folder.title}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST") %>
-        <%= render partial: "shared/dashboard_card", locals: {folder_id: folder.id, title: folder.title, articles: @folder_articles, folder_picture: image_path(folder.image) } %>
+        <%= render partial: "shared/dashboard_card", locals: {folder_id: folder.id, title: folder.title, articles: @folder_articles, folder: folder} %>
         <%= render partial: "new_article_form_modal", locals: {article: @article, folder_id: folder.id} %>
 
       <% end %>

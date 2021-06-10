@@ -1,5 +1,7 @@
 <div class="card">
-  <%= image_tag folder_picture, class:"card-img-top card_border", alt: "Folder picture" %>
+  <% if folder.photo.attached? %>
+  <%= cl_image_tag folder.photo.key, class:"card-img-top card_border", alt: "Folder picture" %>
+  <% end %>
   <div class="card-body">
     <h5 class="card-title"><%= title %></h5>
     <div class="all-articles">
