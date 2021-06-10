@@ -362,7 +362,7 @@ puts "Created folder 🗂"
       url: "https://www.nature.com/articles/s41598-018-36885-0",
       title: "Human Mind Control of Rat Cyborg’s Continuous Locomotion with Wireless Brain-to-Brain Interface",
       note: "BBI experiment with a rat",
-      status: -1,
+      status: 0,
       importance: rand(0..5),
       reminder: DateTime.strptime("2021-07-02 18:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
@@ -373,7 +373,7 @@ puts "Created folder 🗂"
       url: "https://www.the-scientist.com/reading-frames/opinion-the-overlooked-power-of-inhibitory-neurons-68819",
       title: "Opinion: The Overlooked Power of Inhibitory Neurons",
       note: "Short article, quick read",
-      status: -1,
+      status: 0,
       importance: rand(0..5),
       reminder: DateTime.strptime("2021-07-05 18:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
@@ -384,7 +384,7 @@ puts "Created folder 🗂"
       url: "https://www.neurotrackerx.com/post/9-major-neuroscience-breakthroughs-of-2020",
       title: "9 Major Neuroscience Breakthroughs of 2020",
       note: "Super interesting topics ideal for future deep dives",
-      status: -1,
+      status: 0,
       importance: rand(0..5),
       reminder: DateTime.strptime("2021-07-03 18:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
@@ -395,7 +395,7 @@ puts "Created folder 🗂"
       url: "https://www.neurotrackerx.com/post/why-athletes-arent-super-human-when-it-comes-to-mental-health",
       title: "Why Athletes Aren’t Super Human When it Comes to Mental Health",
       note: "Why many athletes suffer from mental health problems",
-      status: -1,
+      status: 0,
       importance: rand(0..5),
       reminder: DateTime.strptime("2021-06-23 18:30:00", "%Y-%m-%d %H:%M:%S"),
       user_id: User.first.id
