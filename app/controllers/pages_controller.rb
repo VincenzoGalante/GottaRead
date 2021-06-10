@@ -13,7 +13,7 @@ class PagesController < ApplicationController
     @tennis_articles = Article.joins(:folders).where(folders:{title:"Tennis"}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST")
     @articles = Article.all
     @missed_article = Article.where(status: "missed").order("reminder DESC NULLS LAST")
-    @next_articles = Article.where(status: "to_read").order("reminder DESC NULLS LAST")
+    @next_articles = Article.where(status: "to_read").order("reminder ASC NULLS LAST")
     @folder = Folder.new
     @article = Article.new
   end
