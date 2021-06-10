@@ -1,3 +1,5 @@
+require "open-uri"
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -26,14 +28,15 @@ puts "Created user 👤"
 
 
 #Creating Folders
-
- Folder.create!(
+file = URI.open('https://www.orca.com/img/products/genre/freediving_web.jpg')
+ folder_freediving = Folder.create!(
     title: "Freediving",
     description: "Underwater folder, blub, blub",
     image: "freediving_folder",
     color: "black",
     user_id: User.first.id
     )
+ folder_freediving.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
   Folder.create!(
     title: "Tennis",
