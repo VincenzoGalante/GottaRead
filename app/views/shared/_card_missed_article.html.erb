@@ -1,6 +1,6 @@
 <div class="card1 w-50 ml-3">
   <div class="card-body">
-    <h5 class="card-title"><%= title %> (<%= @missed_article.count %>)</h5>
+    <h5 class="ml-1"><%= title %> (<%= @missed_article.count %>)</h5>
       <% @missed_article.first(3).each do |article| %>
         <p class="card-text">
           <div class="folder-card-text">
