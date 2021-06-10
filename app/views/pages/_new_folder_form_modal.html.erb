@@ -15,7 +15,7 @@
             <%= f.input :photo, as: :file %>
             <br>
             <button type="button" class="button-ghost" data-dismiss="modal">Close</button>
-            <button type="button" class="button-black">Add</button>
+            <%= f.button :submit, "Add folder", class: "button-black" %>
           <% end %>
         </div>
       </div>
