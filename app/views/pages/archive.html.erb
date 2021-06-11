@@ -30,14 +30,6 @@
                 <div class="folder_card_bottom_right">
                 <%= article.importance %> <i class="far fa-star"></i><br>
 
-                  <% if article.status == "to_read" %>
-                    <%= link_to "Mark as read", mark_as_done_path(article) %>
-                  <% elsif article.status == "missed"%>
-                    <%= link_to "Mark as read", mark_as_done_path(article) %>
-                  <% elsif article.status == "done"%>
-                    <%= link_to "Done", mark_as_done_path(article) %>
-                  <% end %>
-
                 </div>
               </div>
             </div>
