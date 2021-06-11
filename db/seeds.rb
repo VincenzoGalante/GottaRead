@@ -24,6 +24,13 @@ puts "Destroyed sample data 🤯"
     password: "123456"
     )
 
+  User.create!(
+    email: "lisamariemaass@hotmail.com",
+    first_name: "Lisa-Marie",
+    last_name: "Maaß",
+    password: "123456"
+    )
+
 puts "Created user 👤"
 
 
