@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def mark_as_done
+  def update #mark_as_done
     @article = Article.find(params[:id])
     @article.done!
     redirect_to dashboard_path
