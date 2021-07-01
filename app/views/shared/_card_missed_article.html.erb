@@ -1,42 +1,42 @@
 <div class="card1 w-50 ml-3">
   <div class="card-body">
     <h5 class="ml-1"><%= title %> (<%= @missed_article.count %>)</h5>
-      <% @missed_article.first(3).each do |article| %>
-        <p class="card-text">
-          <div class="folder-card-text">
-            <div class="folder_card_container">
-              <div class="folder_card_top">
-                <span class="card_emoticon_push"><%= link_to article.title, article.url, target: :_blank %></span>
-                <span id="article_notes"><%= article.note %></span>
-              </div>
-              <div class="folder_card_bottom">
-                <div class="folder_card_bottom_left">
-                <i class="far fa-bell"></i> <%= article.reminder.strftime("%A %H:%M") %>
+    <% @missed_article.first(3).each do |article| %>
+    <p class="card-text">
+    <div class="folder-card-text">
+      <div class="folder_card_container">
+        <div class="folder_card_top">
+          <span class="card_emoticon_push"><%= link_to article.title, article.url, target: :_blank %></span>
+          <span id="article_notes"><%= article.note %></span>
+        </div>
+        <div class="folder_card_bottom">
+          <div class="folder_card_bottom_left">
+            <i class="far fa-bell"></i> <%= article.reminder.strftime("%A %H:%M") %>
 
-                  <% if article.status == "to_read" %>
-                    <div class="badge badge-pill badge-light green_pill">To read</div>
-                  <% elsif article.status == "missed"%>
-                    <div class="badge badge-pill badge-danger red_pill">Missed <i class="fab fa-hotjar"></i></div>
-                  <% elsif article.status == "done"%>
-                    <div class="badge badge-pill badge-info blue_pill">Done</div>
-                  <% end %>
+            <% if article.status == "to_read" %>
+            <div class="badge badge-pill badge-light green_pill">To read</div>
+            <% elsif article.status == "missed"%>
+            <div class="badge badge-pill badge-danger red_pill">Missed <i class="fab fa-hotjar"></i></div>
+            <% elsif article.status == "done"%>
+            <div class="badge badge-pill badge-info blue_pill">Done</div>
+            <% end %>
 
-                </div>
-                <div class="folder_card_bottom_right">
-                <%= article.importance %> <i class="far fa-star"></i><br>
-
-                  <% if article.status == "to_read" %>
-                    <%= link_to "Mark as read", article_path(article), method: :patch  %>
-                  <% elsif article.status == "missed"%>
-                    <%= link_to "Mark as read", article_path(article), method: :patch  %>
-                  <% elsif article.status == "done"%>
-                    <%= link_to "Done", article_path(article), method: :patch  %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
           </div>
-        </p>
-      <%end%>
+          <div class="folder_card_bottom_right">
+            <%= article.importance %> <i class="far fa-star"></i><br>
+
+            <% if article.status == "to_read" %>
+            <%= link_to "Mark as read", article_path(article), method: :patch, remote: true  %>
+            <% elsif article.status == "missed"%>
+            <%= link_to "Mark as read", article_path(article), method: :patch, remote: true  %>
+            <% elsif article.status == "done"%>
+            <%= link_to "Done", article_path(article), method: :patch  %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+    <%end%>
   </div>
 </div>

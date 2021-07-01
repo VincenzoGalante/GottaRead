@@ -6,60 +6,57 @@
     <h5 class="card-title"><%= title %></h5>
     <div class="all-articles">
       <% articles.each do |article| %>
-        <p id="new_article-<%= article.id %>"class="card-text">
-          <div class="folder-card-text">
+      <p id="new_article-<%= article.id %>" class="card-text">
+      <div class="folder-card-text">
 
-            <div class="folder_card_container">
-              <div class="folder_card_top">
-                <%= link_to article.title, article.url, target: :_blank %><br>
-                <span id="article_notes"><%= article.note %></span>
-              </div>
-              <div class="folder_card_bottom">
-                <div class="folder_card_bottom_left">
-                <i class="far fa-bell"></i> <%= article.reminder.strftime("%d.%m.%y, %H:%M") %>
+        <div class="folder_card_container">
+          <div class="folder_card_top">
+            <%= link_to article.title, article.url, target: :_blank %><br>
+            <span id="article_notes"><%= article.note %></span>
+          </div>
+          <div class="folder_card_bottom">
+            <div class="folder_card_bottom_left">
+              <i class="far fa-bell"></i> <%= article.reminder.strftime("%d.%m.%y, %H:%M") %>
 
-                  <% if article.status == "to_read" %>
-                    <div class="badge badge-pill badge-light green_pill">To read</div>
-                  <% elsif article.status == "missed"%>
-                    <div class="badge badge-pill badge-danger red_pill">Missed</div>
-                  <% elsif article.status == "done"%>
-                    <div class="badge badge-pill badge-info blue_pill">Done</div>
-                  <% end %>
+              <% if article.status == "to_read" %>
+              <div class="badge badge-pill badge-light green_pill">To read</div>
+              <% elsif article.status == "missed"%>
+              <div class="badge badge-pill badge-danger red_pill">Missed</div>
+              <% elsif article.status == "done"%>
+              <div class="badge badge-pill badge-info blue_pill">Done</div>
+              <% end %>
 
-                </div>
-                <div class="folder_card_bottom_right">
-                <%= article.importance %> <i class="far fa-star"></i><br>
+            </div>
+            <div class="folder_card_bottom_right">
+              <%= article.importance %> <i class="far fa-star"></i><br>
 
-                  <% if article.status == "to_read" %>
-                    <%= link_to "Mark as read", article_path(article), method: :patch  %>
-                  <% elsif article.status == "missed"%>
-                    <%= link_to "Mark as read", article_path(article), method: :patch  %>
-                  <% elsif article.status == "done"%>
-                    <%= link_to "Done", article_path(article), method: :patch  %>
-                  <% end %>
+              <% if article.status == "to_read" %>
+              <%= link_to "Mark as read", article_path(article), method: :patch, remote: true  %>
+              <% elsif article.status == "missed"%>
+              <%= link_to "Mark as read", article_path(article), method: :patch, remote: true  %>
+              <% elsif article.status == "done"%>
+              <%= link_to "Done", article_path(article), method: :patch  %>
+              <% end %>
 
-                </div>
-              </div>
             </div>
           </div>
-        </p>
+        </div>
+      </div>
+      </p>
 
       <%end%>
     </div>
   </div>
 
   <div class="card-footer d-flex justify-content-between">
-      <div>
-        <i class="fas fa-share"></i><%= link_to " Share", new_article_path %>
-      </div>
-      <div>
-        <a id="<%= folder_id %>"href="/articles/new" data-toggle="modal" data-target="#article-modal-<%= folder_id %>">
-          <i class="fas fa-plus-circle"></i>
-          Add article
-        </a>
-      </div>
+    <div>
+      <i class="fas fa-share"></i><%= link_to " Share", new_article_path %>
+    </div>
+    <div>
+      <a id="<%= folder_id %>" href="/articles/new" data-toggle="modal" data-target="#article-modal-<%= folder_id %>">
+        <i class="fas fa-plus-circle"></i>
+        Add article
+      </a>
+    </div>
   </div>
 </div>
-
-
-
