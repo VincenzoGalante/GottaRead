@@ -6,7 +6,7 @@
     <h5 class="card-title"><%= title %></h5>
     <div class="all-articles">
       <% articles.each do |article| %>
-        <p class="card-text">
+        <p id="new_article-<%= article.id %>"class="card-text">
           <div class="folder-card-text">
 
             <div class="folder_card_container">
@@ -31,11 +31,11 @@
                 <%= article.importance %> <i class="far fa-star"></i><br>
 
                   <% if article.status == "to_read" %>
-                    <%= link_to "Mark as read", mark_as_done_path(article) %>
+                    <%= link_to "Mark as read", article_path(article), method: :patch  %>
                   <% elsif article.status == "missed"%>
-                    <%= link_to "Mark as read", mark_as_done_path(article) %>
+                    <%= link_to "Mark as read", article_path(article), method: :patch  %>
                   <% elsif article.status == "done"%>
-                    <%= link_to "Done", mark_as_done_path(article) %>
+                    <%= link_to "Done", article_path(article), method: :patch  %>
                   <% end %>
 
                 </div>
