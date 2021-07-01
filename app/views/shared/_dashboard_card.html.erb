@@ -6,7 +6,7 @@
     <h5 class="card-title"><%= title %></h5>
     <div class="all-articles">
       <% articles.each do |article| %>
-        <p class="card-text">
+        <p id="new_article-<%= article.id %>"class="card-text">
           <div class="folder-card-text">
 
             <div class="folder_card_container">

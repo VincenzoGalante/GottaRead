@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
     if @article.save
       @connection = Connection.new(folder_id: @folder.id, article_id: @article.id)
       if @connection.save!
-        redirect_to dashboard_path
+        redirect_to dashboard_path( anchor: "new_article-#{@article.id}")
       end
     else
       render :new

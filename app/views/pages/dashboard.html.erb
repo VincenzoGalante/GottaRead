@@ -11,6 +11,7 @@
         <% @folder_articles = Article.joins(:folders).where(folders:{title: folder.title}, status:["missed", "to_read"]).order("reminder ASC NULLS LAST") %>
         <%= render partial: "shared/dashboard_card", locals: {folder_id: folder.id, title: folder.title, articles: @folder_articles, folder: folder} %>
         <%= render partial: "new_article_form_modal", locals: {article: @article, folder_id: folder.id} %>
+        <p id="new_folder-<%= folder.id %>"></p>
 
       <% end %>
       </div>
