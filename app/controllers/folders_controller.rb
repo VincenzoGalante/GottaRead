@@ -11,7 +11,7 @@ class FoldersController < ApplicationController
     @folder = Folder.new(folders_params)
     @folder.user = current_user
       if @folder.save!
-        redirect_to dashboard_path( anchor: "new_folder-#{@folder.id}")
+        redirect_to dashboard_path(anchor: "folder-#{@folder.id}")
       else
         render :new
       end

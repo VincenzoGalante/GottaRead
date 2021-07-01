@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
   def update #mark_as_done
     @article = Article.find(params[:id])
     @article.done!
-    redirect_to dashboard_path
+    redirect_to folder_path(@folder, anchor: "folder-#{@folder.id}"))
   end
 
   # def show
